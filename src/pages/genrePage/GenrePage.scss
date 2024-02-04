@@ -1,0 +1,41 @@
+.GenreItemRow__row {
+  width: 100%;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: space-between;
+  background: white;
+  padding: 5px 10px;
+}
+
+.GenreItemRow__row__color{
+  background: rgb(238, 246, 255)
+}
+
+.GenreItemRow__row > * {
+  display: flex;
+  align-items: center;
+  margin: 0 5px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.GenreItemRow__row > *::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.GenreItemRow__row > *::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+.GenreItemRow__row__id{
+  width: 40px;
+}
+
+.GenreItemRow__row__name {
+  width: 120px;
+}
+.GenreItemRow__row__edit{
+  width: 30px;
+}

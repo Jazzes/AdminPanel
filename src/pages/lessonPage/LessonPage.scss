@@ -1,0 +1,89 @@
+.LessonItemRow__row {
+  width: 100%;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: space-between;
+  background: white;
+  padding: 5px 10px;
+}
+
+.LessonItemRow__row__color{
+  background: rgb(238, 246, 255)
+}
+
+.LessonItemRow__row > * {
+  display: flex;
+  align-items: center;
+  margin: 0 3px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.LessonItemRow__row > *::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.LessonItemRow__row > *::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+.LessonItemRow__row__visible {
+  width: 40px;
+}
+
+.LessonItemRow__row__id{
+  width: 30px;
+}
+
+.LessonItemRow__row__position{
+  width: 40px;
+}
+
+.LessonItemRow__row__name{
+  width: 120px;
+}
+
+.LessonItemRow__row__subtitle{
+  width: 130px;
+}
+
+.LessonItemRow__row__bpm{
+  width: 60px;
+}
+
+.LessonItemRow__row__fimbos{
+  width: 115px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-height: 80px;
+  overflow-y: auto;
+  padding: 1px 0;
+}
+
+.LessonItemRow__row__genres{
+  width: 115px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-height: 80px;
+  overflow-y: auto;
+  padding: 1px 0;
+}
+.LessonItemRow__row__preview{
+  width: 65px;
+}
+
+.LessonItemRow__row__path{
+  width: 100px;
+}
+
+.LessonItemRow__row__type{
+  width: 70px;
+}
+
+.LessonItemRow__row__edit{
+  width: 30px;
+}

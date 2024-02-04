@@ -1,0 +1,50 @@
+.VariableItemRow__row {
+  width: 100%;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: space-between;
+  background: white;
+  padding: 5px 10px;
+}
+
+.VariableItemRow__row__color{
+  background: rgb(238, 246, 255)
+}
+
+.VariableItemRow__row > * {
+  display: flex;
+  align-items: center;
+  margin: 0 5px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.VariableItemRow__row > *::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.VariableItemRow__row > *::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+.VariableItemRow__row__id{
+  width: 40px;
+}
+
+.VariableItemRow__row__name{
+  width: 150px;
+}
+
+.VariableItemRow__row__value{
+  width: 150px;
+}
+
+.VariableItemRow__row__description{
+  width: 200px;
+}
+
+.VariableItemRow__row__edit{
+  width: 30px;
+}

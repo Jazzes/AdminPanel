@@ -1,0 +1,14 @@
+.FimboItemRow__row__preview__photo{
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.FimboItemRow__row__edit__pen{
+  cursor: pointer;
+  transition: .3s linear all;
+}
+
+.FimboItemRow__row__edit__pen:hover{
+  transform: scale(1.1);
+}

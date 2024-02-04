@@ -1,0 +1,65 @@
+.loginShellWrapper{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginShell{
+  width: 300px;
+  padding: 20px;
+  font-size: 2rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.loginShellText{
+  width: 100%;
+  text-align: center;
+}
+
+.loginShellForm{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.loginShellInput{
+  margin-top: 20px;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid grey;
+  padding: 5px;
+}
+
+.loginShellInput:focus{
+  border-bottom: 1px solid #2F80ED;
+}
+
+.loginShellButton{
+  background: #2F80ED;
+  color: white;
+  margin-top: 20px;
+  border: 1px solid white;
+  font-size: 1.5rem;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s linear all;
+}
+.loginShellButton:hover{
+  background: white;
+  border: 1px solid #2F80ED;
+  color: #2F80ED
+}
+
+.loginShellError{
+  margin-top: 5px;
+  color: #eb4242;
+  font-size: 1.5rem;
+}

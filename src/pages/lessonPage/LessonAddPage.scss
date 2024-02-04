@@ -1,0 +1,285 @@
+.LessonAddPage__container{
+  width: 100%;
+  position: relative;
+}
+
+.LessonAddPage__form{
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 1.5rem;
+  padding-bottom: 70px;
+}
+
+.LessonAddPage__form_left{
+  width: calc(50% - 15px);
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.LessonAddPage__form_right{
+  width: calc(50% - 15px);
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.LessonAddPage__form__button{
+  font-size: 1.5rem;
+  background: #19ad4b;
+  border: 1px solid #19ad4b;
+  border-radius: 5px;
+  color: #fff;
+  padding: 8px 12px;
+  text-align: center;
+  transition: all .3s linear;
+  cursor: pointer;
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.LessonAddPage__form__button:hover{
+  background: #fff;
+  color: #19ad4b;
+}
+
+.LessonAddPage__form__item{
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 2px 10px;
+  border-radius: 5px;
+  background: white;
+}
+
+.LessonAddPage__form__item_text{
+  width: 150px;
+}
+
+.LessonAddPage__form__item_input, .LessonAddPage__form__item_textarea{
+  flex: 1 1 auto;
+  margin-left: 10px;
+  border: 0;
+  background: none;
+  border-bottom: 1px solid grey;
+  padding: 8px 12px 4px 12px;
+}
+
+.LessonAddPage__form__item_input:focus, .LessonAddPage__form__item_textarea:focus{
+  border-bottom: 1px solid #2F80ED;
+}
+
+.LessonAddPage__form__item_textarea{
+  resize: none;
+  font-size: 1.5rem;
+}
+
+.LessonAddPage__form__item__column{
+  display: flex;
+  flex-direction: column;
+}
+
+.LessonAddPage__form__item__column__item{
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin: 2px 0;
+}
+
+.LessonAddPage__form__item_column__circle, .LessonAddPage__form__item_column__circle_green{
+  margin-left: 10px;
+  border: 1px solid grey;
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.LessonAddPage__form__item_column__circle_green{
+  border: 1px solid #19AD4B;
+  background: #19AD4B;
+}
+
+.LessonAddPage__form__item_column__square_green, .LessonAddPage__form__item_column__square{
+  margin-left: 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+.LessonAddPage__form__item_column__square_green{
+  border: 1px solid #19AD4B;
+  background: #19AD4B;
+}
+
+.LessonAddPage__form__item__plusMinus{
+  display: flex;
+}
+
+.LessonAddPage__form__item__plusMinus__plus, .LessonAddPage__form__item__plusMinus__minus{
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 2rem;
+  transition: .3s linear all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.LessonAddPage__form__item__plusMinus__minus{
+  background: #eb4242;
+  border: 1px solid #eb4242;
+  margin-left: 5px;
+}
+
+.LessonAddPage__form__item__plusMinus__minus:hover{
+  background: white;
+  color: #eb4242;
+}
+
+.LessonAddPage__form__item__plusMinus__plus{
+  background: #19AD4B;
+  border: 1px solid #19AD4B;
+}
+
+.LessonAddPage__form__item__plusMinus__plus:hover{
+  background: white;
+  color: #19AD4B;
+}
+
+.LessonAddPage__form__notes__container{
+  margin-top: 10px;
+  max-width: 100%;
+  position: relative;
+  overflow: scroll;
+  padding: 5px;
+  background: white;
+  border-radius: 5px;
+  max-height: 60vh;
+}
+
+.LessonAddPage__form__notes__container::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.LessonAddPage__form__notes__container::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+.LessonAddPage__form__notes__table__note{
+  display: flex;
+  flex-direction: column;
+}
+
+.LessonAddPage__form__notes__hint{
+  font-size: 1rem;
+}
+
+.LessonAddPage__form__notes__table{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+
+.LessonAddPage__form__notes__table__input, .LessonAddPage__form__notes__table__input_center{
+  border: 0;
+  border-right: 1px solid lightgrey;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
+.LessonAddPage__form__notes__table__input_center{
+  border-bottom: 1px solid lightgrey;
+  border-top: 1px solid lightgrey;
+}
+
+.LessonAddPage__form__notes__table__input_orange{
+  background: #ffa5004d;
+}
+
+.LessonAddPage__form__notes__table__hint{
+  font-size: 1rem;
+  left: 33px;
+  position: absolute;
+}
+
+.LessonAddPage__form__notes__table__numberString{
+  background: #2f80ed;
+  border: 1px solid #2f80ed;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  height: 25px;
+  justify-content: center;
+  left: 3px;
+  padding: 5px;
+  transition: all .3s linear;
+  width: 25px;
+  align-items: center;
+  border-radius: 5px;
+  position: absolute;
+  font-size: 1.5rem;
+}
+
+.LessonAddPage__form__notes__table__numberString:hover{
+  background: white;
+  color: #2f80ed;
+  border: 1px solid #2f80ed;
+}
+.LessonAddPage__form__notes__table__numberString__settings{
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  left: 24px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #2f80ed;
+}
+.LessonAddPage__form__notes__table__numberString:hover .LessonAddPage__form__notes__table__numberString__settings{
+  display: flex;
+}
+
+.LessonAddPage__form__notes__table__numberString__settings__item, .LessonAddPage__form__notes__table__numberString__settings__item_center{
+  white-space: nowrap;
+  padding: 2px 5px;
+  transition: .3s linear all;
+}
+.LessonAddPage__form__notes__table__numberString__settings__item_center{
+  border-bottom: 1px solid #2f80ed;
+  border-top: 1px solid #2f80ed;
+}
+
+.LessonAddPage__form__notes__table__numberString__settings__item:hover, .LessonAddPage__form__notes__table__numberString__settings__item_center:hover{
+  background: #2f80ed;
+  color: white
+}
+
+.LessonAddPage__form__notes__table__numberString__settings__item__delete{
+  display: flex;
+  justify-content: space-between;
+}
+
+.LessonAddPage__form__notes__table__numberString__settings__item__delete_yes, .LessonAddPage__form__notes__table__numberString__settings__item__delete_no{
+  border-radius: 5px;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  transition: .3s linear all;
+}
+
+.LessonAddPage__form__notes__table__numberString__settings__item__delete_yes:hover, .LessonAddPage__form__notes__table__numberString__settings__item__delete_no:hover{
+  background: white;
+  color: #2f80ed;
+}

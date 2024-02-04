@@ -1,0 +1,91 @@
+.FimboItemPage__listen_button{
+  font-size: 1.5rem;
+  background: #2f80ed;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: .3s linear all;
+  border: 1px solid #2f80ed;
+}
+
+.FimboItemPage__listen_button:hover{
+  background: white;
+  color: #2f80ed;
+}
+
+.FimboItemPage__mp3__background{
+  background: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.FimboItemPage__mp3__container{
+  background: white;
+  border-radius: 20px;
+  position: relative;
+  padding: 30px;
+  overflow-y: auto;
+  max-height: 60vh;
+}
+
+.FimboItemPage__mp3__cross {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  opacity: 0.5;
+}
+.FimboItemPage__mp3__cross:after, .FimboItemPage__mp3__cross:before{
+  background: #000;
+  content: "";
+  display: block;
+  height: 3px;
+  position: absolute;
+  top: 10px;
+  width: 20px;
+}
+
+.FimboItemPage__mp3__cross::before{
+  transform: rotate(45deg);
+}
+
+.FimboItemPage__mp3__cross::after {
+  transform: rotate(-45deg);
+}
+
+.FimboItemPage__mp3__cross:hover{
+  opacity: 1;
+}
+
+.FimboItemPage__mp3__item{
+  display: flex;
+  align-items: center;
+  padding: 5px 0 ;
+}
+
+.FimboItemPage__mp3__name {
+  width: 100px;
+  margin-right: 10px;
+}
+
+.FimboItemPage__mp3__block{
+  display: flex;
+  align-items: center;
+}
+
+.FimboItemPage__mp3__play{
+  margin-left: 5px;
+  cursor: pointer;
+}

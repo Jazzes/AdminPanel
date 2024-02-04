@@ -1,0 +1,50 @@
+.nav{
+  display: flex;
+  font-size: 1.5rem;
+  width: 100%;
+  justify-content: center;
+  color: white;
+}
+
+.nav__itemWrapper{
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  background: black;
+  padding: 0 40px;
+}
+
+.nav__logout{
+  cursor: pointer;
+  transition: .3s linear all;
+}
+
+.nav__logout:hover{
+  color: lightgrey;
+}
+
+.nav__group{
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__item{
+  color: white;
+  transition: .3s linear all;
+  font-size: 1.5rem;
+}
+
+.nav__item:hover{
+  color: lightgrey;
+}
+
+.nav__name{
+  font-weight: bold;
+}
+
+.nav__activeLink{
+  border-bottom: 1px solid lightgrey;
+}

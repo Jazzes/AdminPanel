@@ -1,0 +1,14 @@
+.ButtonBack{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  cursor: pointer;
+  transition: .3s linear all;
+}
+
+.ButtonBack:hover{
+  transform: scale(1.1)
+}

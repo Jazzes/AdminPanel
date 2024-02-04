@@ -1,0 +1,86 @@
+.VariableItemPage__container{
+  width: 100%;
+  position: relative;
+}
+
+.VariableItemPage__form{
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 1.5rem;
+  padding-bottom: 70px;
+}
+
+.VariableItemPage__form_left{
+  width: calc(50% - 15px);
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.VariableItemPage__form_right{
+  width: calc(50% - 15px);
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.VariableItemPage__form__item{
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 2px 10px;
+  border-radius: 5px;
+  background: white;
+}
+
+.VariableItemPage__form__item_text{
+  width: 150px;
+}
+
+.VariableItemPage__form__item_input, .VariableItemPage__form__item_textarea{
+  flex: 1 1 auto;
+  margin-left: 10px;
+  border: 0;
+  background: none;
+  border-bottom: 1px solid grey;
+  padding: 8px 12px 4px 12px;
+}
+
+.VariableItemPage__form__item_input:focus, .VariableItemPage__form__item_textarea:focus{
+  border-bottom: 1px solid #2F80ED;
+}
+
+.VariableItemPage__form__item_textarea {
+  resize: none;
+  font-size: 1.5rem;
+}
+
+.VariableItemPage__form__button_save, .VariableItemPage__form__button_delete{
+  font-size: 1.5rem;
+  background: grey;
+  border: 1px solid grey;
+  border-radius: 5px;
+  color: #fff;
+  padding: 8px 12px;
+  text-align: center;
+  transition: all .3s linear;
+  cursor: pointer;
+  width: 120px;
+}
+
+.VariableItemPage__form__button_save{
+  margin-right: 10px;
+}
+
+.VariableItemPage__form__button_save:hover, .VariableItemPage__form__button_delete:hover{
+  background: #fff;
+  color: black;
+}
+
+.VariableItemPage__form__button__container{
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 15px;
+}

@@ -1,0 +1,14 @@
+.LessonTypeItemRow__row__preview__photo{
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.LessonTypeItemRow__row__edit__pen{
+  cursor: pointer;
+  transition: .3s linear all;
+}
+
+.LessonTypeItemRow__row__edit__pen:hover{
+  transform: scale(1.1);
+}

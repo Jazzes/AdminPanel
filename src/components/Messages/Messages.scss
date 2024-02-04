@@ -1,0 +1,53 @@
+.FailedFetchMessage{
+  font-size: 1.5rem;
+  color: #eb4242;
+  margin-top: 30px;
+  padding: 0 30px;
+}
+
+.WarningMessage{
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50px;
+  background: white;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 10px;
+  animation: WarningMessage__disappear 5.5s linear;
+  z-index: 1;
+}
+
+@keyframes WarningMessage__disappear {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.SuccessMessage, .ErrorMessage{
+  padding: 4px 12px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  font-size: 1.5rem;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.SuccessMessage{
+  color: #19AD4B;
+  border: 1px solid #19AD4B;
+}
+
+.ErrorMessage{
+  color: #eb4242;
+  border: 1px solid #eb4242;
+}

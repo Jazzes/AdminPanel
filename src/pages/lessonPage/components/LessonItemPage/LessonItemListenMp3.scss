@@ -1,0 +1,118 @@
+.LessonItemPage__mp3__background{
+  background: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.LessonItemPage__mp3__container{
+  background: white;
+  border-radius: 20px;
+  position: relative;
+  padding: 30px;
+  overflow-y: auto;
+  max-height: 60vh;
+}
+
+.LessonItemPage__mp3__cross {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  opacity: 0.5;
+}
+.LessonItemPage__mp3__cross:after, .LessonItemPage__mp3__cross:before{
+  background: #000;
+  content: "";
+  display: block;
+  height: 3px;
+  position: absolute;
+  top: 10px;
+  width: 20px;
+}
+
+.LessonItemPage__mp3__cross::before{
+  transform: rotate(45deg);
+}
+
+.LessonItemPage__mp3__cross::after {
+  transform: rotate(-45deg);
+}
+
+.LessonItemPage__mp3__cross:hover{
+  opacity: 1;
+}
+
+.LessonItemPage__mp3__item{
+  display: flex;
+  align-items: center;
+  padding: 5px 0 ;
+}
+
+.LessonItemPage__mp3__play{
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.LessonItemPage__mp3__name {
+  width: 100px;
+  margin-right: 10px;
+}
+
+.LessonItemPage__mp3__block{
+  display: flex;
+  align-items: center;
+}
+
+.LessonItemPage__mp3__player{
+  display: flex;
+  align-items: center;
+}
+
+.LessonItemPage__mp3__player__play{
+  padding: 5px;
+  display: flex;
+  cursor: pointer;
+}
+
+.LessonItemPage__mp3__slider__container{
+  width: 200px;
+  cursor: pointer;
+  margin-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.LessonItemPage__mp3__slider__progress{
+  width: 200px;
+  background: lightgray;
+  height: 3px;
+  border-radius: 5px;
+}
+
+.LessonItemPage__mp3__slider__progress_current{
+  width: 0;
+  height: 3px;
+  border-radius: 3px;
+  background: black;
+}
+
+.LessonItemPage__mp3__duration{
+  margin-left: 10px;
+  display: flex;
+}
+.LessonItemPage__mp3__duration_current{
+  width: 35px;
+}
+.LessonItemPage__mp3__duration_common{
+  width: 35px;
+  margin-left: 5px;
+}
