@@ -99,3 +99,65 @@
   display: flex;
   justify-content: space-between;
 }
+
+.FimboAddPage__form__item__plusMinus{
+  display: flex;
+}
+
+.FimboAddPage__form__item__plusMinus__plus, .FimboAddPage__form__item__plusMinus__minus{
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 2rem;
+  transition: .3s linear all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.FimboAddPage__form__item__plusMinus__minus{
+  background: #eb4242;
+  border: 1px solid #eb4242;
+  margin-left: 5px;
+}
+
+.FimboAddPage__form__item__plusMinus__minus:hover{
+  background: white;
+  color: #eb4242;
+}
+
+.FimboAddPage__form__item__plusMinus__plus{
+  background: #19AD4B;
+  border: 1px solid #19AD4B;
+}
+
+.FimboAddPage__form__item__plusMinus__plus:hover{
+  background: white;
+  color: #19AD4B;
+}
+
+.FimboAddPage__form__item__column{
+  display: flex;
+  flex-direction: column;
+}
+
+.FimboAddPage__form__item__column__item{
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin: 2px 0;
+}
+
+.FimboAddPage__form__item_column__circle, .FimboAddPage__form__item_column__circle_green{
+  margin-left: 10px;
+  border: 1px solid grey;
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.FimboAddPage__form__item_column__circle_green{
+  border: 1px solid #19AD4B;
+  background: #19AD4B;
+}

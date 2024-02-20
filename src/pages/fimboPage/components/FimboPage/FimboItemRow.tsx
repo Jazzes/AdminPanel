@@ -1,8 +1,8 @@
-import React, {FC, memo, useRef, useState} from 'react';
+import React, {FC, memo} from 'react';
 import "./FimboItemRow.scss"
 import {Fimbo} from "../../../../models/Models";
 import {Link} from "react-router-dom";
-import ImgPreview from "../../../../components/PhotoPreview/ImgPreview";
+import FimboPagePreviews from "./FimboPagePreviews";
 
 interface IFimboItemRow {
     fimbo: Fimbo
@@ -11,15 +11,6 @@ interface IFimboItemRow {
 }
 
 const FimboItemRow: FC<IFimboItemRow> = memo(({fimbo, index, filesHost}) => {
-
-    const noImg = useRef(false)
-    const [imgPreview, setImgPreview] = useState(false)
-
-    const imgURL = `${filesHost}/files/cover/${fimbo.path}/${fimbo.img}`
-
-    const closeImgPreview = () => {
-        setImgPreview(false)
-    }
 
     return (
         <>
@@ -36,17 +27,17 @@ const FimboItemRow: FC<IFimboItemRow> = memo(({fimbo, index, filesHost}) => {
                 <div className="FimboItemRow__row__name">
                     {fimbo.name}
                 </div>
-                <div className="FimboItemRow__row__img">
-                    {fimbo.img}
+
+                <div className="FimboItemRow__row__purchase">
+                    {fimbo.purchase ?
+                        <>Да</>
+                        :
+                        <>Нет</>
+                    }
                 </div>
-                <div className="FimboItemRow__row__preview">
-                    <img className="FimboItemRow__row__preview__photo"
-                         src={imgURL} onClick={() => {
-                        if (!noImg.current)
-                            setImgPreview(true)
-                    }} onError={() => noImg.current = true}
-                         loading="lazy" alt=""/>
-                </div>
+
+                <FimboPagePreviews fimbo={fimbo} filesHost={filesHost}/>
+
                 <div className="FimboItemRow__row__path">
                     {fimbo.path}
                 </div>
@@ -63,9 +54,6 @@ const FimboItemRow: FC<IFimboItemRow> = memo(({fimbo, index, filesHost}) => {
                 </div>
 
             </div>
-            {imgPreview &&
-                <ImgPreview closeImgPreview={closeImgPreview} url={imgURL}/>
-            }
         </>
     );
 })

@@ -1,5 +1,7 @@
 import React, {FC, memo} from 'react';
 import {IFimboAdd} from "../../FimboAddPage";
+import FimboAddImg from "./FimboAddImg";
+import FimboAddPurchase from "./FimboAddPurchase";
 
 const FimboAddInfoLeft : FC<IFimboAdd> = memo(({wasChanges}) => {
     return (
@@ -36,13 +38,15 @@ const FimboAddInfoLeft : FC<IFimboAdd> = memo(({wasChanges}) => {
 
             <div className="FimboAddPage__form__item">
                 <div className="FimboAddPage__form__item_text">
-                    Сжатая картинка
+                    Картинка на стр "Слушать"
                 </div>
-                <input autoComplete={"off"} required name="img_resized"
+                <input autoComplete={"off"} required name="img_listen"
                        onChange={() => {
                            wasChanges.current = true
                        }} className="FimboAddPage__form__item_input"/>
             </div>
+
+            <FimboAddImg wasChanges={wasChanges}/>
 
             <div className="FimboAddPage__form__item">
                 <div className="FimboAddPage__form__item_text">
@@ -113,6 +117,7 @@ const FimboAddInfoLeft : FC<IFimboAdd> = memo(({wasChanges}) => {
                            wasChanges.current = true
                        }} className="FimboAddPage__form__item_input"/>
             </div>
+            <FimboAddPurchase wasChanges={wasChanges} />
         </>
     );
 })

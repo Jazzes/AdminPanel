@@ -37,16 +37,13 @@
   width: 120px;
 }
 
-.FimboItemRow__row__img{
-  width: 140px;
-}
-
 .FimboItemRow__row__pos{
   width: 40px;
 }
 
 .FimboItemRow__row__preview{
-  width: 40px;
+  width: 140px;
+  overflow-x: scroll
 }
 
 .FimboItemRow__row__path{
@@ -55,4 +52,8 @@
 
 .FimboItemRow__row__edit{
   width: 30px;
+}
+
+.FimboItemRow__row__purchase{
+  width: 90px;
 }

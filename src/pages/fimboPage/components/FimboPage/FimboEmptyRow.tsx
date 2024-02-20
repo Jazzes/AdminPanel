@@ -49,10 +49,13 @@ const FimboEmptyRow = memo(() => {
                 </svg>
             </div>
 
-            <div className="FimboItemRow__row__img">
-                Картинка
+            <div className="FimboItemRow__row__purchase">
+                В продаже
             </div>
-            <div className="FimboItemRow__row__preview"/>
+
+            <div className="FimboItemRow__row__preview">
+                Превью
+            </div>
 
             <div className="FimboItemRow__row__path cursor_pointer" onClick={() => {
                 changeSort(5)

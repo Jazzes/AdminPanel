@@ -29,7 +29,7 @@ const FimboAddInfoRight : FC<IFimboAdd> = memo(({wasChanges}) => {
                             <input autoComplete={"off"} required name={"lep" + note + "_transform"}
                                    onChange={ () => {
                                        wasChanges.current = true
-                                   }}
+                                   }} pattern="[0-9]+.?[0-9]*"
                                    className="FimboAddPage__form__lepest__input"/>
                         </div>
                         <div className="FimboAddPage__form__lepest__item__row__item">
@@ -37,7 +37,7 @@ const FimboAddInfoRight : FC<IFimboAdd> = memo(({wasChanges}) => {
                             <input autoComplete={"off"} required name={"lep" + note + "_width"}
                                    onChange={ () => {
                                        wasChanges.current = true
-                                   }}
+                                   }} pattern="[0-9]+.?[0-9]*"
                                    className="FimboAddPage__form__lepest__input"/>
                         </div>
                         <div className="FimboAddPage__form__lepest__item__row__item">
@@ -45,7 +45,7 @@ const FimboAddInfoRight : FC<IFimboAdd> = memo(({wasChanges}) => {
                             <input autoComplete={"off"} required name={"lep" + note + "_height"}
                                    onChange={ () => {
                                        wasChanges.current = true
-                                   }}
+                                   }} pattern="[0-9]+.?[0-9]*"
                                    className="FimboAddPage__form__lepest__input"/>
                         </div>
                         <div className="FimboAddPage__form__lepest__item__row__item">
@@ -53,7 +53,7 @@ const FimboAddInfoRight : FC<IFimboAdd> = memo(({wasChanges}) => {
                             <input autoComplete={"off"} required name={"lep" + note + "_left"}
                                    onChange={ () => {
                                        wasChanges.current = true
-                                   }}
+                                   }} pattern="[0-9]+.?[0-9]*"
                                    className="FimboAddPage__form__lepest__input"/>
                         </div>
                         <div className="FimboAddPage__form__lepest__item__row__item">
@@ -61,7 +61,7 @@ const FimboAddInfoRight : FC<IFimboAdd> = memo(({wasChanges}) => {
                             <input autoComplete={"off"} required name={"lep" + note + "_top"}
                                    onChange={ () => {
                                        wasChanges.current = true
-                                   }}
+                                   }} pattern="[0-9]+.?[0-9]*"
                                    className="FimboAddPage__form__lepest__input"/>
                         </div>
                         <div className="FimboAddPage__form__lepest__item__row__item">
@@ -69,7 +69,7 @@ const FimboAddInfoRight : FC<IFimboAdd> = memo(({wasChanges}) => {
                             <input autoComplete={"off"} required name={"lep" + note + "_num_top"}
                                    onChange={ () => {
                                        wasChanges.current = true
-                                   }}
+                                   }} pattern="[0-9]+.?[0-9]*"
                                    className="FimboAddPage__form__lepest__input"/>
                         </div>
                         <div className="FimboAddPage__form__lepest__item__row__item">
@@ -77,7 +77,7 @@ const FimboAddInfoRight : FC<IFimboAdd> = memo(({wasChanges}) => {
                             <input autoComplete={"off"} required name={"lep" + note + "_num_left"}
                                    onChange={ () => {
                                        wasChanges.current = true
-                                   }}
+                                   }} pattern="[0-9]+.?[0-9]*"
                                    className="FimboAddPage__form__lepest__input"/>
                         </div>
                     </div>

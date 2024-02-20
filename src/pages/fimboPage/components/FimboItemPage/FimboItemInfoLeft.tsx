@@ -1,5 +1,7 @@
 import React, {FC, memo} from 'react';
 import {FimboItemWithChange} from "../../FimboItemPage";
+import FimboItemImg from "./FimboItemImg";
+import FimboItemPurchase from "./FimboItemPurchase";
 
 const FimboItemInfoLeft : FC<FimboItemWithChange> = memo(({fimbo, wasChanges}) => {
 
@@ -37,13 +39,15 @@ const FimboItemInfoLeft : FC<FimboItemWithChange> = memo(({fimbo, wasChanges}) =
 
             <div className="FimboItemPage__form__item">
                 <div className="FimboItemPage__form__item_text">
-                    Сжатая картинка
+                    Картинка на стр "Слушать"
                 </div>
-                <input autoComplete={"off"} required name="img_resized" defaultValue={fimbo.img_resized}
+                <input autoComplete={"off"} required name="img_listen" defaultValue={fimbo.img_listen}
                        onChange={() => {
                            wasChanges.current = true
                        }} className="FimboItemPage__form__item_input"/>
             </div>
+
+            <FimboItemImg fimbo={fimbo} wasChanges={wasChanges} />
 
             <div className="FimboItemPage__form__item FimboItemPage__form__item_relative">
                 <div className="FimboItemPage__form__item_text">
@@ -124,6 +128,8 @@ const FimboItemInfoLeft : FC<FimboItemWithChange> = memo(({fimbo, wasChanges}) =
                            wasChanges.current = true
                        }} className="FimboItemPage__form__item_input"/>
             </div>
+
+            <FimboItemPurchase fimbo={fimbo} wasChanges={wasChanges} />
         </>
     );
 })

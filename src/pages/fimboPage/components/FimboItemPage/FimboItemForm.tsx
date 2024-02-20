@@ -5,7 +5,7 @@ import FetchLoading from "../../../../components/Loading/FetchLoading";
 import {FimboApi} from "../../../../store/services/FimboApiService";
 import {errorSlice, successSlice} from "../../../../store/reducer/MessagesSlice";
 import {useAppDispatch} from "../../../../store/hooks/redux";
-import {Fimbo, LepestEntity, NoteEntity} from "../../../../models/Models";
+import {Fimbo, FimboAdditionalImg, LepestEntity, NoteEntity} from "../../../../models/Models";
 import FimboItemInfoLeft from "./FimboItemInfoLeft";
 import FimboItemInfoRight from "./FimboItemInfoRight";
 import FimboItemButtons from "./FimboItemButtons";
@@ -33,6 +33,17 @@ const FimboItemForm: FC<FimboItem> = memo(({fimbo}) => {
                 notes.push({note: key.substring(8, key.length), file_sound: String(formJson[key])})
             }
         }
+
+        const img_additional: FimboAdditionalImg[] = []
+        let i = 0
+        while (formJson[`img_additional_path_${i}`] === "" || formJson[`img_additional_path_${i}`]) {
+            img_additional.push({
+                path: String(formJson[`img_additional_path_${i}`])
+            })
+            ++i
+        }
+
+
         const lepest: LepestEntity[] = []
         for (let i = 1; i < 11; ++i) {
             lepest.push({
@@ -51,7 +62,9 @@ const FimboItemForm: FC<FimboItem> = memo(({fimbo}) => {
             id: fimbo.id,
             name: String(formJson.name),
             img: String(formJson.img),
-            img_resized: String(formJson.img_resized),
+            img_listen: String(formJson.img_listen),
+            img_additional: img_additional,
+            purchase: formJson.purchase === "1",
             buy_url: String(formJson.buy_url),
             path: String(formJson.path),
             notes,

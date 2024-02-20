@@ -28,7 +28,7 @@ const FimboItemInfoRight: FC<FimboItemWithChange> = memo(({fimbo, wasChanges}) =
                             <input autoComplete={"off"} required name={"lep" + lepest.lep + "_transform"}
                                    onChange={() => {
                                        wasChanges.current = true
-                                   }} defaultValue={lepest.transform}
+                                   }} defaultValue={lepest.transform} pattern="[0-9]+.?[0-9]*"
                                    className="FimboItemPage__form__lepest__input"/>
                         </div>
                         <div className="FimboItemPage__form__lepest__item__row__item">
@@ -36,7 +36,7 @@ const FimboItemInfoRight: FC<FimboItemWithChange> = memo(({fimbo, wasChanges}) =
                             <input autoComplete={"off"} required name={"lep" + lepest.lep + "_width"}
                                    onChange={() => {
                                        wasChanges.current = true
-                                   }} defaultValue={lepest.width}
+                                   }} defaultValue={lepest.width} pattern="[0-9]+.?[0-9]*"
                                    className="FimboItemPage__form__lepest__input"/>
                         </div>
                         <div className="FimboItemPage__form__lepest__item__row__item">
@@ -44,7 +44,7 @@ const FimboItemInfoRight: FC<FimboItemWithChange> = memo(({fimbo, wasChanges}) =
                             <input autoComplete={"off"} required name={"lep" + lepest.lep + "_height"}
                                    onChange={() => {
                                        wasChanges.current = true
-                                   }} defaultValue={lepest.height}
+                                   }} defaultValue={lepest.height} pattern="[0-9]+.?[0-9]*"
                                    className="FimboItemPage__form__lepest__input"/>
                         </div>
                         <div className="FimboItemPage__form__lepest__item__row__item">
@@ -52,7 +52,7 @@ const FimboItemInfoRight: FC<FimboItemWithChange> = memo(({fimbo, wasChanges}) =
                             <input autoComplete={"off"} required name={"lep" + lepest.lep + "_left"}
                                    onChange={() => {
                                        wasChanges.current = true
-                                   }} defaultValue={lepest.left}
+                                   }} defaultValue={lepest.left} pattern="[0-9]+.?[0-9]*"
                                    className="FimboItemPage__form__lepest__input"/>
                         </div>
                         <div className="FimboItemPage__form__lepest__item__row__item">
@@ -60,7 +60,7 @@ const FimboItemInfoRight: FC<FimboItemWithChange> = memo(({fimbo, wasChanges}) =
                             <input autoComplete={"off"} required name={"lep" + lepest.lep + "_top"}
                                    onChange={() => {
                                        wasChanges.current = true
-                                   }} defaultValue={lepest.top}
+                                   }} defaultValue={lepest.top} pattern="[0-9]+.?[0-9]*"
                                    className="FimboItemPage__form__lepest__input"/>
                         </div>
                         <div className="FimboItemPage__form__lepest__item__row__item">
@@ -68,7 +68,7 @@ const FimboItemInfoRight: FC<FimboItemWithChange> = memo(({fimbo, wasChanges}) =
                             <input autoComplete={"off"} required name={"lep" + lepest.lep + "_num_top"}
                                    onChange={() => {
                                        wasChanges.current = true
-                                   }} defaultValue={lepest.num_top}
+                                   }} defaultValue={lepest.num_top} pattern="[0-9]+.?[0-9]*"
                                    className="FimboItemPage__form__lepest__input"/>
                         </div>
                         <div className="FimboItemPage__form__lepest__item__row__item">
@@ -76,7 +76,7 @@ const FimboItemInfoRight: FC<FimboItemWithChange> = memo(({fimbo, wasChanges}) =
                             <input autoComplete={"off"} required name={"lep" + lepest.lep + "_num_left"}
                                    onChange={() => {
                                        wasChanges.current = true
-                                   }} defaultValue={lepest.num_left}
+                                   }} defaultValue={lepest.num_left} pattern="[0-9]+.?[0-9]*"
                                    className="FimboItemPage__form__lepest__input"/>
                         </div>
                     </div>

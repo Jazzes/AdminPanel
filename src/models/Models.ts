@@ -46,9 +46,15 @@ export interface Genre{
     name: string
 }
 
+export interface FimboAdditionalImg{
+    path: string
+}
+
 export interface Fimbo extends Sample {
     img: string,
-    img_resized: string,
+    img_listen: string,
+    img_additional: FimboAdditionalImg[]
+    purchase: boolean
     buy_url: string,
     notes: NoteEntity[],
     background_first_color: string,

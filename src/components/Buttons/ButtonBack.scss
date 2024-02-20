@@ -2,11 +2,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 5px;
+  position: fixed;
+  top: 60px;
   left: 10px;
   cursor: pointer;
   transition: .3s linear all;
+  z-index: 1;
+  padding: 5px;
+  border-radius: 5px;
+  background: #ebebeb;
 }
 
 .ButtonBack:hover{

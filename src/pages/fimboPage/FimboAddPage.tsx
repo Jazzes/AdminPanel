@@ -3,13 +3,12 @@ import "./FimboAddPage.scss"
 import {errorSlice, successSlice} from "../../store/reducer/MessagesSlice";
 import {useAppDispatch} from "../../store/hooks/redux";
 import {useNavigate} from "react-router-dom";
-import {Fimbo, LepestEntity, NoteEntity} from "../../models/Models";
+import {Fimbo, FimboAdditionalImg, LepestEntity, NoteEntity} from "../../models/Models";
 import ButtonBack from "../../components/Buttons/ButtonBack";
 import FetchLoading from "../../components/Loading/FetchLoading";
 import {FimboApi} from "../../store/services/FimboApiService";
 import FimboAddInfoLeft from "./components/FimboAddPage/FimboAddInfoLeft";
 import FimboAddInfoRight from "./components/FimboAddPage/FimboAddInfoRight";
-
 export interface IFimboAdd {
     wasChanges: React.MutableRefObject<boolean>
 }
@@ -37,6 +36,16 @@ const FimboAddPage = () => {
             }
         }
         const lepest: LepestEntity[] = []
+
+        const img_additional: FimboAdditionalImg[] = []
+        let i = 0
+        while (formJson[`img_additional_path_${i}`] === "" || formJson[`img_additional_path_${i}`]) {
+            img_additional.push({
+                path: String(formJson[`img_additional_path_${i}`])
+            })
+            ++i
+        }
+
         for (let i = 1; i < 11; ++i) {
             lepest.push({
                 lep: `${i}`,
@@ -54,8 +63,10 @@ const FimboAddPage = () => {
             id: 0,
             name: String(formJson.name),
             img: String(formJson.img),
-            img_resized: String(formJson.img_resized),
+            img_listen: String(formJson.img_listen),
+            img_additional: img_additional,
             buy_url: String(formJson.buy_url),
+            purchase: formJson.purchase === "1",
             path: String(formJson.path),
             notes,
             background_first_color: String(formJson.background_first_color),
