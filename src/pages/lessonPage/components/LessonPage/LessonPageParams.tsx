@@ -11,7 +11,7 @@ const LessonPageParams = memo(() => {
     const [searchParams, setSearchParams] = useSearchParams()
 
     const {data: fimbos} = FimboApi.useFetchAllFimbosQuery('')
-    const {data: genres} = GenreApi.useFetchAllGenresQuery('')
+    const {data: genres} = GenreApi.useFetchAllGenresQuery('sort=3')
     const {data: lessonTypes} = LessonTypeApi.useFetchAllLessonTypesQuery('')
     const timeoutName = useRef<ReturnType<typeof setTimeout>>()
     const timeoutFimbo = useRef<ReturnType<typeof setTimeout>>()

@@ -47,14 +47,16 @@
   height: 100%;
   background: white;
   overflow-y: scroll;
-  width: 125px;
   font-size: 1.4rem;
   margin-left: 5px;
+  margin-top: 5px;
   transition: all .3s linear;
+}
+.LessonPageParams__genres__list{
+  margin-right: 5px;
 }
 
 .LessonPageParams__list__name{
-  max-width: 80px;
   overflow-x: scroll;
   overflow-y: hidden;
   padding-top: 5px;

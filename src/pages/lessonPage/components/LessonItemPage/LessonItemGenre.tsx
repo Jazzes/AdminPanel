@@ -3,7 +3,7 @@ import {ILessonItem} from "./LessonItemForm";
 import {GenreApi} from "../../../../store/services/GenreApiService";
 
 const LessonItemGenre : FC<ILessonItem> = ({lesson, wasChanges}) => {
-    const {data: genres} = GenreApi.useFetchAllGenresQuery('')
+    const {data: genres} = GenreApi.useFetchAllGenresQuery('sort=3')
 
     const [conAllGenres, setConAllGenres] = useState(false)
     const [connectedGenres, setConnectedGenres] = useState<Array<number>>([])
