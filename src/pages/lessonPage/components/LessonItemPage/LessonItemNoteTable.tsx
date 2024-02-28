@@ -103,6 +103,7 @@ const LessonItemNoteTable: FC<ILessonItemNoteTable> = ({wasChanges, bpm, lesson,
 
     return (
         <>
+            <LessonItemListen lesson={lesson} bpm={bpm} l_tact={l_tact} l_beat={l_beat} l_square={l_square} beats={beatsNoUpdate}/>
             <div className="LessonItemPage__form__notes__container">
                 <div className="LessonItemPage__form__notes__hint">Даблклик по клетке ставит акцент</div>
                 <div style={{maxWidth: `${Number(l_beat) * 20}px`, minWidth: `${Number(l_beat) * 20}px`}}
@@ -263,7 +264,6 @@ const LessonItemNoteTable: FC<ILessonItemNoteTable> = ({wasChanges, bpm, lesson,
                 </div>
 
             </div>
-            <LessonItemListen lesson={lesson} bpm={bpm} l_tact={l_tact} l_beat={l_beat} l_square={l_square} beats={beatsNoUpdate}/>
         </>
     );
 };

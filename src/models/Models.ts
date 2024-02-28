@@ -87,6 +87,7 @@ export interface Lesson extends Sample {
     mp3: Mp3Entity,
     lesson_type_id: number,
     visible: boolean,
+    page_listen: boolean,
     position: number
 }
 

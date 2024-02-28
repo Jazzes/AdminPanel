@@ -6,6 +6,7 @@ import LessonItemVisible from "./LessonItemVisible";
 import LessonItemFimbo from "./LessonItemFimbo";
 import {ILessonItem} from "./LessonItemForm";
 import LessonItemGenre from "./LessonItemGenre";
+import LessonItemPageListen from "./LessonItemPageListen";
 
 const LessonItemInfo : FC<ILessonItem> = memo(({wasChanges, lesson}) => {
     return (
@@ -82,6 +83,8 @@ const LessonItemInfo : FC<ILessonItem> = memo(({wasChanges, lesson}) => {
             <LessonItemType wasChanges={wasChanges} lesson={lesson}/>
 
             <LessonItemVisible lesson={lesson} wasChanges={wasChanges} />
+
+            <LessonItemPageListen wasChanges={wasChanges} lesson={lesson} />
 
             <LessonItemFimbo lesson={lesson} wasChanges={wasChanges} />
 

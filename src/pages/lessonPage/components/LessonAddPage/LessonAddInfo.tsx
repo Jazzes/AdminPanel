@@ -6,6 +6,7 @@ import LessonAddMp4 from "./LessonAddMp4";
 import LessonAddVisible from "./LessonAddVisible";
 import LessonAddFimbo from "./LessonAddFimbo";
 import LessonAddGenre from "./LessonAddGenre";
+import LessonAddPageListen from "./LessonAddPageListen";
 
 export interface ILessonAddWithVars {
     wasChanges: React.MutableRefObject<boolean>
@@ -93,6 +94,8 @@ const LessonAddInfo : FC<ILessonAddWithVars> = memo(({wasChanges, variables}) =>
             </div>
 
             <LessonAddVisible wasChanges={wasChanges} />
+
+            <LessonAddPageListen wasChanges={wasChanges} />
 
             <LessonAddFimbo wasChanges={wasChanges} />
 
