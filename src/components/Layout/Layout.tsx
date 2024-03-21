@@ -28,6 +28,11 @@ const Layout = () => {
                         }>
                             Fimbo
                         </NavLink>
+                        <NavLink to="/audio" className={({isActive}) =>
+                            ["nav__item", isActive ? "nav__activeLink" : ""].join(" ")
+                        }>
+                            Audio
+                        </NavLink>
                         <NavLink to="/lesson-type" className={({isActive}) =>
                             ["nav__item", isActive ? "nav__activeLink" : ""].join(" ")
                         }>

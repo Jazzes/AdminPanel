@@ -1,6 +1,6 @@
 import React, {FC, useEffect, useRef, useState} from 'react';
 import {BeatEntity} from "../../../../models/Models";
-import {ILessonAdd} from "./LessonAddInfo";
+import {ILessonAdd} from "./LessonAddInfoLeft";
 
 interface ILessonAddNoteTable extends ILessonAdd{
     l_beat: string

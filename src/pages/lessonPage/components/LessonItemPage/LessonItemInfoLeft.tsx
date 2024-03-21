@@ -8,7 +8,7 @@ import {ILessonItem} from "./LessonItemForm";
 import LessonItemGenre from "./LessonItemGenre";
 import LessonItemPageListen from "./LessonItemPageListen";
 
-const LessonItemInfo : FC<ILessonItem> = memo(({wasChanges, lesson}) => {
+const LessonItemInfoLeft : FC<ILessonItem> = memo(({wasChanges, lesson}) => {
     return (
         <>
             <div className="LessonItemPage__form__item">
@@ -94,4 +94,4 @@ const LessonItemInfo : FC<ILessonItem> = memo(({wasChanges, lesson}) => {
     );
 })
 
-export default LessonItemInfo;
+export default LessonItemInfoLeft;

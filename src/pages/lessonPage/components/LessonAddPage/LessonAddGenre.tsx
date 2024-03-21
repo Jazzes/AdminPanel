@@ -1,5 +1,5 @@
 import React, {FC, useState} from 'react';
-import {ILessonAdd} from "./LessonAddInfo";
+import {ILessonAdd} from "./LessonAddInfoLeft";
 import {GenreApi} from "../../../../store/services/GenreApiService";
 
 const LessonAddGenre : FC<ILessonAdd> = ({wasChanges}) => {

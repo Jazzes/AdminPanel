@@ -3,7 +3,7 @@ import LessonItemNoteTable from "./LessonItemNoteTable";
 import {ILessonItem} from "./LessonItemForm";
 
 
-const LessonItemNoteChars : FC<ILessonItem> = memo(({wasChanges, lesson}) => {
+const LessonItemInfoRight : FC<ILessonItem> = memo(({wasChanges, lesson}) => {
 
     const [l_tact, setL_tact] = useState(String(lesson.lesson.l_tact))
     const [l_square, setL_square] = useState(String(lesson.lesson.l_square))
@@ -70,4 +70,4 @@ const LessonItemNoteChars : FC<ILessonItem> = memo(({wasChanges, lesson}) => {
     );
 })
 
-export default LessonItemNoteChars;
+export default LessonItemInfoRight;

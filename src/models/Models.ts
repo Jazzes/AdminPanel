@@ -116,6 +116,19 @@ export interface User{
     role: string
 }
 
+export interface Audio{
+    id: number
+    name: string
+    path: string
+    img: string
+    visible: boolean
+    fimbo_id: number
+    fimbo_size: string
+    type: string
+    position: number
+    mp3_path: string
+}
+
 export interface FimboLessonLink{
     lesson_id: number
     fimbo_id: number

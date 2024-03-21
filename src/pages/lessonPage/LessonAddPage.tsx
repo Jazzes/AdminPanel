@@ -1,8 +1,8 @@
 import React, {FormEvent, useRef} from 'react';
 import "./LessonAddPage.scss"
-import LessonAddNoteChars from "./components/LessonAddPage/LessonAddNoteChars";
+import LessonAddInfoRight from "./components/LessonAddPage/LessonAddInfoRight";
 import ButtonBack from "../../components/Buttons/ButtonBack";
-import LessonAddInfo from "./components/LessonAddPage/LessonAddInfo";
+import LessonAddInfoLeft from "./components/LessonAddPage/LessonAddInfoLeft";
 import {VariableApi} from "../../store/services/VariablesApiService";
 import Loading from "../../components/Loading/Loading";
 import {BeatEntity, Lesson, mp4LessonEntity} from "../../models/Models";
@@ -148,10 +148,10 @@ const LessonAddPage = () => {
                             <ButtonBack wasChanges={wasChanges}/>
                             <form className="LessonAddPage__form" onSubmit={handleSubmit}>
                                 <div className="LessonAddPage__form_left">
-                                    <LessonAddInfo variables={variables.rows} wasChanges={wasChanges}/>
+                                    <LessonAddInfoLeft variables={variables.rows} wasChanges={wasChanges}/>
                                 </div>
                                 <div className="LessonAddPage__form_right">
-                                    <LessonAddNoteChars variables={variables.rows} wasChanges={wasChanges}/>
+                                    <LessonAddInfoRight variables={variables.rows} wasChanges={wasChanges}/>
                                 </div>
 
                                 <button className="LessonAddPage__form__button" type='submit'>Добавить</button>

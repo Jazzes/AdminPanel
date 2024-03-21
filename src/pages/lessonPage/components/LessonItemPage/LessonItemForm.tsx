@@ -1,8 +1,8 @@
 import React, {FC, FormEvent, useRef} from 'react';
 import {BeatEntity, Lesson, mp4LessonEntity} from "../../../../models/Models";
 import ButtonBack from "../../../../components/Buttons/ButtonBack";
-import LessonItemInfo from "./LessonItemInfo";
-import LessonItemNoteChars from "./LessonItemNoteChars";
+import LessonItemInfoLeft from "./LessonItemInfoLeft";
+import LessonItemInfoRight from "./LessonItemInfoRight";
 import {ILessonOneResponse} from "../../../../models/StoreModels";
 import LessonItemButtons from "./LessonItemButtons";
 import {LessonApi} from "../../../../store/services/LessonApiService";
@@ -120,10 +120,10 @@ const LessonItemForm : FC<ILessonItemForm> = ({lesson}) => {
             <ButtonBack wasChanges={wasChanges}/>
             <form className="LessonItemPage__form" onSubmit={handleSubmit}>
                 <div className="LessonItemPage__form_left">
-                    <LessonItemInfo lesson={lesson} wasChanges={wasChanges}/>
+                    <LessonItemInfoLeft lesson={lesson} wasChanges={wasChanges}/>
                 </div>
                 <div className="LessonItemPage__form_right">
-                    <LessonItemNoteChars lesson={lesson} wasChanges={wasChanges}/>
+                    <LessonItemInfoRight lesson={lesson} wasChanges={wasChanges}/>
                 </div>
                 <LessonItemButtons/>
             </form>

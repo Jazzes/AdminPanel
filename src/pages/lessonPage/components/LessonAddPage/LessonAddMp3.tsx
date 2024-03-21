@@ -1,5 +1,5 @@
 import React, {FC, useEffect, useState} from 'react';
-import {ILessonAddWithVars} from "./LessonAddInfo";
+import {ILessonAddWithVars} from "./LessonAddInfoLeft";
 
 
 const LessonAddMp3 : FC<ILessonAddWithVars> = ({wasChanges, variables}) => {

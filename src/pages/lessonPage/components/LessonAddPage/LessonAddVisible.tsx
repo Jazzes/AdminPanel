@@ -1,10 +1,10 @@
 import React, {FC, useState} from 'react';
-import {ILessonAdd} from "./LessonAddInfo";
+import {ILessonAdd} from "./LessonAddInfoLeft";
 
 
 const LessonAddVisible : FC<ILessonAdd>  = ({wasChanges}) => {
 
-    const [visible, setVisible] = useState(true)
+    const [visible, setVisible] = useState(false)
 
     return (
         <div className="LessonAddPage__form__item">

@@ -1,6 +1,6 @@
 import React, {FC, useState} from 'react';
 import {mp4LessonEntity} from "../../../../models/Models";
-import {ILessonAdd} from "./LessonAddInfo";
+import {ILessonAdd} from "./LessonAddInfoLeft";
 
 
 const LessonAddMp4 : FC<ILessonAdd> = ({wasChanges}) => {

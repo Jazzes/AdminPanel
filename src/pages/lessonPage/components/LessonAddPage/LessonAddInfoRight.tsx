@@ -1,9 +1,9 @@
 import React, {FC, memo, useEffect, useState} from 'react';
 import LessonAddNoteTable from "./LessonAddNoteTable";
-import {ILessonAddWithVars} from "./LessonAddInfo";
+import {ILessonAddWithVars} from "./LessonAddInfoLeft";
 
 
-const LessonAddNoteChars: FC<ILessonAddWithVars> = memo(({wasChanges, variables}) => {
+const LessonAddInfoRight: FC<ILessonAddWithVars> = memo(({wasChanges, variables}) => {
 
     const [l_tact, setL_tact] = useState('')
     const [l_square, setL_square] = useState('')
@@ -84,4 +84,4 @@ const LessonAddNoteChars: FC<ILessonAddWithVars> = memo(({wasChanges, variables}
     );
 })
 
-export default LessonAddNoteChars;
+export default LessonAddInfoRight;

@@ -1,6 +1,6 @@
 import React, {FC, useState} from 'react';
 import {FimboApi} from "../../../../store/services/FimboApiService";
-import {ILessonAdd} from "./LessonAddInfo";
+import {ILessonAdd} from "./LessonAddInfoLeft";
 
 
 const LessonAddFimbo : FC<ILessonAdd> = ({wasChanges}) => {

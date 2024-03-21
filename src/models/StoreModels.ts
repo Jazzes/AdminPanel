@@ -1,4 +1,4 @@
-import {Fimbo, Genre, Lesson, LessonResponse, LessonType, User, Variable} from "./Models";
+import {Audio, Fimbo, Genre, Lesson, LessonResponse, LessonType, User, Variable} from "./Models";
 
 export interface UserState extends User{
     isAuth: boolean,
@@ -20,6 +20,11 @@ export interface IFimboResponse{
 export interface ILessonResponse{
     count: number,
     rows: LessonResponse[]
+}
+
+export interface IAudioResponse{
+    count: number,
+    rows: Audio[]
 }
 
 export interface ILessonOneResponse{

@@ -17,7 +17,7 @@ export interface ILessonAdd {
     wasChanges: React.MutableRefObject<boolean>
 }
 
-const LessonAddInfo : FC<ILessonAddWithVars> = memo(({wasChanges, variables}) => {
+const LessonAddInfoLeft : FC<ILessonAddWithVars> = memo(({wasChanges, variables}) => {
 
     return (
 
@@ -105,4 +105,4 @@ const LessonAddInfo : FC<ILessonAddWithVars> = memo(({wasChanges, variables}) =>
     );
 })
 
-export default LessonAddInfo;
+export default LessonAddInfoLeft;

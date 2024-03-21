@@ -1,5 +1,5 @@
 import React, {FC, useState} from 'react';
-import {ILessonAdd} from "./LessonAddInfo";
+import {ILessonAdd} from "./LessonAddInfoLeft";
 
 
 const LessonAddPageListen : FC<ILessonAdd>  = ({wasChanges}) => {

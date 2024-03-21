@@ -1,6 +1,6 @@
 import React, {FC, useState} from 'react';
 import {LessonTypeApi} from "../../../../store/services/LessonTypeApiService";
-import {ILessonAdd} from "./LessonAddInfo";
+import {ILessonAdd} from "./LessonAddInfoLeft";
 
 const LessonAddType: FC<ILessonAdd> = ({wasChanges}) => {
 
