@@ -3,7 +3,7 @@ import "./FimboAddPage.scss"
 import {errorSlice, successSlice} from "../../store/reducer/MessagesSlice";
 import {useAppDispatch} from "../../store/hooks/redux";
 import {useNavigate} from "react-router-dom";
-import {Fimbo, FimboAdditionalImg, FimboNotes, LepestEntity, NoteEntity} from "../../models/Models";
+import {Fimbo, FimboAdditionalImg, FimboNotes, LepestEntity} from "../../models/Models";
 import ButtonBack from "../../components/Buttons/ButtonBack";
 import FetchLoading from "../../components/Loading/FetchLoading";
 import {FimboApi} from "../../store/services/FimboApiService";

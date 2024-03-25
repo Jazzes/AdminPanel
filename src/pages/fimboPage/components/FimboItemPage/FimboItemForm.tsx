@@ -5,7 +5,7 @@ import FetchLoading from "../../../../components/Loading/FetchLoading";
 import {FimboApi} from "../../../../store/services/FimboApiService";
 import {errorSlice, successSlice} from "../../../../store/reducer/MessagesSlice";
 import {useAppDispatch} from "../../../../store/hooks/redux";
-import {Fimbo, FimboAdditionalImg, FimboNotes, LepestEntity, NoteEntity} from "../../../../models/Models";
+import {Fimbo, FimboAdditionalImg, FimboNotes, LepestEntity} from "../../../../models/Models";
 import FimboItemInfoLeft from "./FimboItemInfoLeft";
 import FimboItemInfoRight from "./FimboItemInfoRight";
 import FimboItemButtons from "./FimboItemButtons";
