@@ -56,7 +56,7 @@ const LessonItemPlayNotes: FC<ILessonItemListen> = ({bpm, lesson, closeWindow, b
                         {
                             path: ent.path,
                             host,
-                            names: ent.notes,
+                            names: ent.notes.size27,
                             lessonPath: lesson.lesson.path
                         }
                     )

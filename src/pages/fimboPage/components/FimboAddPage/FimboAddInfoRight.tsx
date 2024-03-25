@@ -3,14 +3,36 @@ import {IFimboAdd} from "../../FimboAddPage";
 
 const FimboAddInfoRight : FC<IFimboAdd> = memo(({wasChanges}) => {
 
+    const numbers27 = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
     const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+
 
     return (
         <>
+            {numbers27.map(note =>
+                <div className="FimboAddPage__form__item" key={note}>
+                    <div className="FimboAddPage__form__item_text">22см нота {note}</div>
+                    <input autoComplete={"off"} required name={"fimnote22cm_" + note}
+                           onChange={ () => {
+                               wasChanges.current = true
+                           }}
+                           className="FimboAddPage__form__item_input"/>
+                </div>
+            )}
             {numbers.map(note =>
                 <div className="FimboAddPage__form__item" key={note}>
-                    <div className="FimboAddPage__form__item_text">Нота {note}</div>
-                    <input autoComplete={"off"} required name={"fimnote_" + note}
+                    <div className="FimboAddPage__form__item_text">27см нота {note}</div>
+                    <input autoComplete={"off"} required name={"fimnote27cm_" + note}
+                           onChange={ () => {
+                               wasChanges.current = true
+                           }}
+                           className="FimboAddPage__form__item_input"/>
+                </div>
+            )}
+            {numbers.map(note =>
+                <div className="FimboAddPage__form__item" key={note}>
+                    <div className="FimboAddPage__form__item_text">32см нота {note}</div>
+                    <input autoComplete={"off"} required name={"fimnote32cm_" + note}
                            onChange={ () => {
                                wasChanges.current = true
                            }}

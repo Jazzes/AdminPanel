@@ -30,6 +30,12 @@ export interface NoteEntity {
     file_sound: string
 }
 
+export interface FimboNotes{
+    size22: NoteEntity[],
+    size27: NoteEntity[],
+    size32: NoteEntity[]
+}
+
 export interface LepestEntity{
     lep: string,
     transform: string,
@@ -56,7 +62,7 @@ export interface Fimbo extends Sample {
     img_additional: FimboAdditionalImg[]
     purchase: boolean
     buy_url: string,
-    notes: NoteEntity[],
+    notes: FimboNotes
     background_first_color: string,
     background_second_color: string,
     note_default_color: string,

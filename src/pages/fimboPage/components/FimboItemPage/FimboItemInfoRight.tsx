@@ -4,12 +4,34 @@ import FimboItemListenMp3Button from "./FimboItemListenMp3Button";
 
 const FimboItemInfoRight: FC<FimboItemWithChange> = memo(({fimbo, wasChanges}) => {
 
+
+
     return (
         <>
-            {fimbo.notes.map(note =>
+            {fimbo.notes.size22.map(note =>
                 <div className="FimboItemPage__form__item" key={note.note}>
-                    <div className="FimboItemPage__form__item_text">Нота {note.note}</div>
-                    <input autoComplete={"off"} required name={"fimnote_" + note.note}
+                    <div className="FimboItemPage__form__item_text">22см нота {note.note}</div>
+                    <input autoComplete={"off"} required name={"fimnote22cm_" + note.note}
+                           onChange={() => {
+                               wasChanges.current = true
+                           }} defaultValue={note.file_sound}
+                           className="FimboItemPage__form__item_input"/>
+                </div>
+            )}
+            {fimbo.notes.size27.map(note =>
+                <div className="FimboItemPage__form__item" key={note.note}>
+                    <div className="FimboItemPage__form__item_text">27см нота {note.note}</div>
+                    <input autoComplete={"off"} required name={"fimnote27cm_" + note.note}
+                           onChange={() => {
+                               wasChanges.current = true
+                           }} defaultValue={note.file_sound}
+                           className="FimboItemPage__form__item_input"/>
+                </div>
+            )}
+            {fimbo.notes.size32.map(note =>
+                <div className="FimboItemPage__form__item" key={note.note}>
+                    <div className="FimboItemPage__form__item_text">32см нота {note.note}</div>
+                    <input autoComplete={"off"} required name={"fimnote32cm_" + note.note}
                            onChange={() => {
                                wasChanges.current = true
                            }} defaultValue={note.file_sound}

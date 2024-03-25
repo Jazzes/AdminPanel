@@ -5,7 +5,7 @@ import FetchLoading from "../../../../components/Loading/FetchLoading";
 import {FimboApi} from "../../../../store/services/FimboApiService";
 import {errorSlice, successSlice} from "../../../../store/reducer/MessagesSlice";
 import {useAppDispatch} from "../../../../store/hooks/redux";
-import {Fimbo, FimboAdditionalImg, LepestEntity, NoteEntity} from "../../../../models/Models";
+import {Fimbo, FimboAdditionalImg, FimboNotes, LepestEntity, NoteEntity} from "../../../../models/Models";
 import FimboItemInfoLeft from "./FimboItemInfoLeft";
 import FimboItemInfoRight from "./FimboItemInfoRight";
 import FimboItemButtons from "./FimboItemButtons";
@@ -27,10 +27,18 @@ const FimboItemForm: FC<FimboItem> = memo(({fimbo}) => {
         const formData = new FormData(form)
         const formJson = Object.fromEntries(formData.entries())
 
-        const notes: NoteEntity[] = []
+        const notes: FimboNotes = {
+            size22: [],
+            size27: [],
+            size32: []
+        }
         for (let key in formJson) {
-            if (key.substring(0, 7) === "fimnote") {
-                notes.push({note: key.substring(8, key.length), file_sound: String(formJson[key])})
+            if (key.substring(0, 11) === "fimnote22cm") {
+                notes.size22.push({note: key.substring(12, key.length), file_sound: String(formJson[key])})
+            } else if (key.substring(0, 11) === "fimnote27cm") {
+                notes.size27.push({note: key.substring(12, key.length), file_sound: String(formJson[key])})
+            } else if (key.substring(0, 11) === "fimnote32cm") {
+                notes.size32.push({note: key.substring(12, key.length), file_sound: String(formJson[key])})
             }
         }
 

@@ -3,7 +3,7 @@ import "./FimboAddPage.scss"
 import {errorSlice, successSlice} from "../../store/reducer/MessagesSlice";
 import {useAppDispatch} from "../../store/hooks/redux";
 import {useNavigate} from "react-router-dom";
-import {Fimbo, FimboAdditionalImg, LepestEntity, NoteEntity} from "../../models/Models";
+import {Fimbo, FimboAdditionalImg, FimboNotes, LepestEntity, NoteEntity} from "../../models/Models";
 import ButtonBack from "../../components/Buttons/ButtonBack";
 import FetchLoading from "../../components/Loading/FetchLoading";
 import {FimboApi} from "../../store/services/FimboApiService";
@@ -29,13 +29,20 @@ const FimboAddPage = () => {
         const formData = new FormData(form)
         const formJson = Object.fromEntries(formData.entries())
 
-        const notes: NoteEntity[] = []
+        const notes: FimboNotes = {
+            size22: [],
+            size27: [],
+            size32: []
+        }
         for (let key in formJson) {
-            if (key.substring(0, 7) === "fimnote") {
-                notes.push({note: key.substring(8, key.length), file_sound: String(formJson[key])})
+            if (key.substring(0, 11) === "fimnote22cm") {
+                notes.size22.push({note: key.substring(12, key.length), file_sound: String(formJson[key])})
+            } else if (key.substring(0, 11) === "fimnote27cm") {
+                notes.size27.push({note: key.substring(12, key.length), file_sound: String(formJson[key])})
+            } else if (key.substring(0, 11) === "fimnote32cm") {
+                notes.size32.push({note: key.substring(12, key.length), file_sound: String(formJson[key])})
             }
         }
-        const lepest: LepestEntity[] = []
 
         const img_additional: FimboAdditionalImg[] = []
         let i = 0
@@ -46,6 +53,7 @@ const FimboAddPage = () => {
             ++i
         }
 
+        const lepest: LepestEntity[] = []
         for (let i = 1; i < 11; ++i) {
             lepest.push({
                 lep: `${i}`,
