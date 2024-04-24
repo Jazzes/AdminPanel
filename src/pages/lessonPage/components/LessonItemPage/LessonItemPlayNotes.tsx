@@ -208,73 +208,82 @@ const LessonItemPlayNotes: FC<ILessonItemListen> = ({bpm, lesson, closeWindow, b
 
                         <div className="LessonItemPage__notesListen__notes__container">
                             <div style={{
-                                maxWidth: `${l_beatNum * 20 + 15}px`,
-                                minWidth: `${l_beatNum * 20 + 15}px`
+                                maxWidth: `${l_beatNum * 20}px`,
+                                minWidth: `${l_beatNum * 20}px`
                             }} className="LessonItemPage__notesListen__notes__rows">
                                 {beats.current.map((entity, index) =>
-                                    <div key={index} className="LessonItemPage__notesListen__notes__column">
-                                        {(((entity.num_r || entity.num_r === 0) && (entity.num_l || entity.num_l === 0)) || ((entity.num_l || entity.num_l === 0) && (entity.num || entity.num === 0))) ?
-                                            <div id={"num_" + index} onClick={() => {
-                                                currentNotePlaying.current = index
-                                                for (let i = 0; i < currentNotePlaying.current; ++i) {
-                                                    playedNote(i)
-                                                }
-                                                for (let i = currentNotePlaying.current; i < CommonCount; ++i) {
-                                                    clearNote(i)
-                                                }
-                                                if (play) {
-                                                    clearInterval(Interval.current)
-                                                    startInterval()
-                                                }
+                                    <span key={index+"sha"}>
+                                        {(index + 1) % Number(l_beatNum) === 0 ?
+                                            <div className="LessonItemPage__notesListen__notes__count"
+                                                 style={{top: `${(index + 1) / Number(l_beat) * 40 - 27}px`}}
+                                            >
+                                                {(index + 1) / Number(l_beatNum)}
+                                            </div>
+                                            : <></>}
+                                        <div key={index} className="LessonItemPage__notesListen__notes__column">
+                                            {(((entity.num_r || entity.num_r === 0) && (entity.num_l || entity.num_l === 0)) || ((entity.num_l || entity.num_l === 0) && (entity.num || entity.num === 0))) ?
+                                                <div id={"num_" + index} onClick={() => {
+                                                    currentNotePlaying.current = index
+                                                    for (let i = 0; i < currentNotePlaying.current; ++i) {
+                                                        playedNote(i)
+                                                    }
+                                                    for (let i = currentNotePlaying.current; i < CommonCount; ++i) {
+                                                        clearNote(i)
+                                                    }
+                                                    if (play) {
+                                                        clearInterval(Interval.current)
+                                                        startInterval()
+                                                    }
 
-                                            }}
-                                                 className={(index + 1) % l_beatNum === 0 ? "LessonItemPage__notesListen__note LessonItemPage__notesListen__note_noRight" : "LessonItemPage__notesListen__note"}
-                                                 style={index >= (l_beatNum * (l_squareNum - 1)) ? {borderBottom: 0} : {}}>
+                                                }}
+                                                     className={(index + 1) % l_beatNum === 0 ? "LessonItemPage__notesListen__note LessonItemPage__notesListen__note_noRight" : "LessonItemPage__notesListen__note"}
+                                                     style={index >= (l_beatNum * (l_squareNum - 1)) ? {borderBottom: 0} : {}}>
                                                 <div className="LessonItemPage__notesListen__note_top">
-                                                    {entity.num_l}
+                                                        {entity.num_l}
+                                                    </div>
+                                                    <div className="LessonItemPage__notesListen__note_bot">
+                                                        {(entity.num_r || entity.num_r === 0) ?
+                                                            <>
+                                                                {entity.num_r}
+                                                            </>
+                                                            :
+                                                            <>
+                                                                {entity.num}
+                                                            </>
+                                                        }
+                                                    </div>
+
                                                 </div>
-                                                <div className="LessonItemPage__notesListen__note_bot">
-                                                    {(entity.num_r || entity.num_r === 0) ?
-                                                        <>
-                                                            {entity.num_r}
-                                                        </>
-                                                        :
-                                                        <>
-                                                            {entity.num}
-                                                        </>
+                                                :
+                                                <div id={"num_" + index} onClick={() => {
+                                                    currentNotePlaying.current = index
+                                                    for (let i = 0; i < currentNotePlaying.current; ++i) {
+                                                        playedNote(i)
+                                                    }
+                                                    for (let i = currentNotePlaying.current; i < CommonCount; ++i) {
+                                                        clearNote(i)
+                                                    }
+                                                    if (play) {
+                                                        clearInterval(Interval.current)
+                                                        startInterval()
+                                                    }
+                                                }}
+                                                     className={(index + 1) % l_beatNum === 0 ? "LessonItemPage__notesListen__note LessonItemPage__notesListen__note_noRight" : "LessonItemPage__notesListen__note"}
+                                                     style={index >= (l_beatNum * (l_squareNum - 1)) ? {borderBottom: 0} : {}}>
+                                                    {(entity.num || entity.num === 0) &&
+                                                        <>{entity.num}</>
+                                                    }
+                                                    {(entity.num_l || entity.num_l === 0) &&
+                                                        <>{entity.num_l}</>
+                                                    }
+                                                    {(entity.num_r || entity.num_r === 0) &&
+                                                        <>{entity.num_r}</>
                                                     }
                                                 </div>
+                                            }
 
-                                            </div>
-                                            :
-                                            <div id={"num_" + index} onClick={() => {
-                                                currentNotePlaying.current = index
-                                                for (let i = 0; i < currentNotePlaying.current; ++i) {
-                                                    playedNote(i)
-                                                }
-                                                for (let i = currentNotePlaying.current; i < CommonCount; ++i) {
-                                                    clearNote(i)
-                                                }
-                                                if (play) {
-                                                    clearInterval(Interval.current)
-                                                    startInterval()
-                                                }
-                                            }}
-                                                 className={(index + 1) % l_beatNum === 0 ? "LessonItemPage__notesListen__note LessonItemPage__notesListen__note_noRight" : "LessonItemPage__notesListen__note"}
-                                                 style={index >= (l_beatNum * (l_squareNum - 1)) ? {borderBottom: 0} : {}}>
-                                                {(entity.num || entity.num === 0) &&
-                                                    <>{entity.num}</>
-                                                }
-                                                {(entity.num_l || entity.num_l === 0) &&
-                                                    <>{entity.num_l}</>
-                                                }
-                                                {(entity.num_r || entity.num_r === 0) &&
-                                                    <>{entity.num_r}</>
-                                                }
-                                            </div>
-                                        }
-
-                                    </div>
+                                        </div>
+                                    </span>
                                 )}
                             </div>
                         </div>
