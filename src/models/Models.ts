@@ -56,10 +56,16 @@ export interface FimboAdditionalImg{
     path: string
 }
 
+export interface FimboVideoEntity{
+    path: string
+    preview: string
+}
+
 export interface Fimbo extends Sample {
     img: string,
     img_listen: string,
     img_additional: FimboAdditionalImg[]
+    video: FimboVideoEntity[]
     purchase: boolean
     buy_url: string,
     notes: FimboNotes

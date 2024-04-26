@@ -46,9 +46,15 @@ const AmountPages: FC<IAmountPages> = memo(({count}) => {
             tempArr.push(i + 1)
         }
         if (!tempArr.includes(1)) {
+            if (!tempArr.includes(2)){
+                tempArr.unshift(0)
+            }
             tempArr.unshift(1)
         }
         if (!tempArr.includes(numOfPages)) {
+            if (!tempArr.includes(numOfPages - 1)){
+                tempArr.push(0)
+            }
             tempArr.push(numOfPages)
         }
         setPages(tempArr)
@@ -59,18 +65,32 @@ const AmountPages: FC<IAmountPages> = memo(({count}) => {
     }
     return (
         <div className="AmountPages__container">
-            {pages.map(ent =>
-                <div key={ent} onClick={() => {
-                    window.scrollTo(0, 0)
-                    changePage(ent)
-                }} className={currentPage === ent ?
-                    "AmountPages__page__item AmountPages__page__selected" : "AmountPages__page__item"}
-                     style={ent === 1 ?
-                         {borderBottomLeftRadius: 5, borderTopLeftRadius: 5, borderLeft: "1px solid lightgrey"} : (
-                             ent === numOfPages ? {borderBottomRightRadius: 5, borderTopRightRadius: 5} : {})}
-                >
-                    {ent}
-                </div>
+            {pages.map((ent, index) =>
+                <span key={index}>
+                    {ent !== 0 ?
+                        <div onClick={() => {
+                            window.scrollTo(0, 0)
+                            changePage(ent)
+                        }} className={currentPage === ent ?
+                            "AmountPages__page__item AmountPages__page__selected" : "AmountPages__page__item"}
+                             style={ent === 1 ?
+                                 {
+                                     borderBottomLeftRadius: 5,
+                                     borderTopLeftRadius: 5,
+                                     borderLeft: "1px solid lightgrey"
+                                 } : (
+                                     ent === numOfPages ? {borderBottomRightRadius: 5, borderTopRightRadius: 5} : {})}
+                        >
+                            {ent}
+                        </div>
+                        :
+
+                        <div className={"AmountPages__page__item__dots"}>
+                            ...
+                        </div>
+                    }
+
+                </span>
             )}
         </div>
     );

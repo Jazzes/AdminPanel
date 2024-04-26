@@ -20,6 +20,19 @@
   cursor: pointer;
 }
 
+.AmountPages__page__item__dots{
+  background: white;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 4px;
+}
+
 .AmountPages__page__selected{
   background: #2F80ED;
   color: white;

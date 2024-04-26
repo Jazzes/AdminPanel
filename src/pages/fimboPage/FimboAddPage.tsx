@@ -3,7 +3,7 @@ import "./FimboAddPage.scss"
 import {errorSlice, successSlice} from "../../store/reducer/MessagesSlice";
 import {useAppDispatch} from "../../store/hooks/redux";
 import {useNavigate} from "react-router-dom";
-import {Fimbo, FimboAdditionalImg, FimboNotes, LepestEntity} from "../../models/Models";
+import {Fimbo, FimboAdditionalImg, FimboNotes, FimboVideoEntity, LepestEntity} from "../../models/Models";
 import ButtonBack from "../../components/Buttons/ButtonBack";
 import FetchLoading from "../../components/Loading/FetchLoading";
 import {FimboApi} from "../../store/services/FimboApiService";
@@ -53,6 +53,16 @@ const FimboAddPage = () => {
             ++i
         }
 
+        const videos_f: FimboVideoEntity[] = []
+        let z = 0
+        while (formJson[`videos_path_${z}`] === "" || formJson[`videos_path_${z}`]) {
+            videos_f.push({
+                path: String(formJson[`videos_path_${z}`]),
+                preview: String(formJson[`videos_preview_${z}`]),
+            })
+            ++z
+        }
+
         const lepest: LepestEntity[] = []
         for (let i = 1; i < 11; ++i) {
             lepest.push({
@@ -73,6 +83,7 @@ const FimboAddPage = () => {
             img: String(formJson.img),
             img_listen: String(formJson.img_listen),
             img_additional: img_additional,
+            video: videos_f,
             buy_url: String(formJson.buy_url),
             purchase: formJson.purchase === "1",
             path: String(formJson.path),

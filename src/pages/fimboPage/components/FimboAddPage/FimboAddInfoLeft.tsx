@@ -2,6 +2,7 @@ import React, {FC, memo} from 'react';
 import {IFimboAdd} from "../../FimboAddPage";
 import FimboAddImg from "./FimboAddImg";
 import FimboAddPurchase from "./FimboAddPurchase";
+import FimboAddVideo from "./FimboAddVideo";
 
 const FimboAddInfoLeft : FC<IFimboAdd> = memo(({wasChanges}) => {
     return (
@@ -47,6 +48,8 @@ const FimboAddInfoLeft : FC<IFimboAdd> = memo(({wasChanges}) => {
             </div>
 
             <FimboAddImg wasChanges={wasChanges}/>
+
+            <FimboAddVideo wasChanges={wasChanges} />
 
             <div className="FimboAddPage__form__item">
                 <div className="FimboAddPage__form__item_text">
