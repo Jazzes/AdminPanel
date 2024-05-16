@@ -9,7 +9,6 @@ const AudioAddFimbo : FC<IAudioAdd>= ({wasChanges}) => {
 
     useEffect(() => {
         if (fimbos) {
-            console.log(fimbos)
             setConnectedFimbo(fimbos.rows[0].id)
         }
     }, [fimbos]);
