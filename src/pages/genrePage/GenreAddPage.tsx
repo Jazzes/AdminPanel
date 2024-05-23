@@ -32,7 +32,8 @@ const GenreAddPage = () => {
 
         const newJson: Genre = {
             id: 0,
-            name: String(formJson.name)
+            name: String(formJson.name),
+            position: Number(formJson.position)
         }
 
         createGenre(newJson).then(async (result) => {

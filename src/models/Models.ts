@@ -49,7 +49,8 @@ export interface LepestEntity{
 
 export interface Genre{
     id: number,
-    name: string
+    name: string,
+    position: number
 }
 
 export interface FimboAdditionalImg{

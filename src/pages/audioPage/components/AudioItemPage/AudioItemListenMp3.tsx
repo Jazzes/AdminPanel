@@ -22,7 +22,7 @@ const AudioItemListenMp3: FC<{ audio: Audio }> = ({audio}) => {
 
     return (
         <div className="AudioItemPage__form__item">
-            <div className="AudioItemPage__form__item_text">{audio.mp3_path}</div>
+            <div className="AudioItemPage__form__item_text" style={{overflowWrap: "break-word"}}>{audio.mp3_path}</div>
             <audio id="audio" src={audioPath} onTimeUpdate={(e) => {
                 const {currentTime, duration} = e.currentTarget
                 const progress = (currentTime / duration) * 100

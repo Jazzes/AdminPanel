@@ -16,6 +16,9 @@ const GenreItemRow: FC<IGenreItemRow> = ({genre, index}) => {
                 <div className="GenreItemRow__row__id">
                     {genre.id}
                 </div>
+                <div className="GenreItemRow__row__pos">
+                    {genre.position}
+                </div>
 
                 <div className="GenreItemRow__row__name">
                     {genre.name}

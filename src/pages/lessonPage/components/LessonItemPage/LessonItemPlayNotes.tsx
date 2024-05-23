@@ -178,10 +178,7 @@ const LessonItemPlayNotes: FC<ILessonItemListen> = ({bpm, lesson, closeWindow, b
             {(fimboLoading) ?
                 <FetchLoading/>
                 :
-                <div className="LessonItemPage__notesListen__background" onClick={() => {
-                    clearInterval(Interval.current)
-                    closeWindow()
-                }}>
+                <div className="LessonItemPage__notesListen__background">
                     <div className="LessonItemPage__notesListen__container" onClick={e => e.stopPropagation()}>
 
                         <div className="LessonItemPage__notesListen__cross" onClick={() => {

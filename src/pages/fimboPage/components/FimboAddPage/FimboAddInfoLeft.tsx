@@ -21,7 +21,7 @@ const FimboAddInfoLeft : FC<IFimboAdd> = memo(({wasChanges}) => {
                 <div className="FimboAddPage__form__item_text">
                     pos
                 </div>
-                <input autoComplete={"off"} required name="position" pattern="[0-9]+"
+                <input autoComplete={"off"} required name="position" pattern="[0-9]+" defaultValue={1}
                        onChange={() => {
                            wasChanges.current = true
                        }} className="FimboAddPage__form__item_input"/>
