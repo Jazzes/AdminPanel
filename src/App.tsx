@@ -24,6 +24,9 @@ import GenreAddPage from "./pages/genrePage/GenreAddPage";
 import AudioPage from "./pages/audioPage/AudioPage";
 import AudioItemPage from "./pages/audioPage/AudioItemPage";
 import AudioAddPage from "./pages/audioPage/AudioAddPage";
+import SoulAddPage from "./pages/soulOptionPage/SoulAddPage";
+import SoulItemPage from "./pages/soulOptionPage/SoulItemPage";
+import SoulPage from "./pages/soulOptionPage/SoulPage";
 function App() {
 
     UpdateAuth().then()
@@ -35,25 +38,33 @@ function App() {
             <Route element={<PrivateRouter/>}>
                 <Route element={<Layout/>}>
                     <Route path="/lesson" element={<LessonPage/>}/>
-                    <Route path="/fimbo" element={<FimboPage/>}/>
-                    <Route path="/audio" element={<AudioPage/>}/>
-                    <Route path="/lesson-type" element={<LessonTypePage/>}/>
-                    <Route path="/variable" element={<VariablePage/>}/>
-                    <Route path="/genre" element={<GenrePage/>}/>
-
                     <Route path="/lesson/:id" element={<LessonItemPage/>}/>
-                    <Route path="/fimbo/:id" element={<FimboItemPage/>}/>
-                    <Route path="/audio/:id" element={<AudioItemPage/>}/>
-                    <Route path="/lesson-type/:id" element={<LessonTypeItemPage/>}/>
-                    <Route path="/variable/:id" element={<VariableItemPage/>}/>
-                    <Route path="/genre/:id" element={<GenreItemPage/>}/>
-
                     <Route path="/lesson/add" element={<LessonAddPage/>}/>
+
+                    <Route path="/fimbo" element={<FimboPage/>}/>
+                    <Route path="/fimbo/:id" element={<FimboItemPage/>}/>
                     <Route path="/fimbo/add" element={<FimboAddPage/>}/>
+
+                    <Route path="/audio" element={<AudioPage/>}/>
+                    <Route path="/audio/:id" element={<AudioItemPage/>}/>
                     <Route path="/audio/add" element={<AudioAddPage/>}/>
+
+
+                    <Route path="/lesson-type" element={<LessonTypePage/>}/>
+                    <Route path="/lesson-type/:id" element={<LessonTypeItemPage/>}/>
                     <Route path="/lesson-type/add" element={<LessonTypeAddPage/>}/>
+
+                    <Route path="/variable" element={<VariablePage/>}/>
+                    <Route path="/variable/:id" element={<VariableItemPage/>}/>
                     <Route path="/variable/add" element={<VariableAddPage/>}/>
+
+                    <Route path="/genre" element={<GenrePage/>}/>
+                    <Route path="/genre/:id" element={<GenreItemPage/>}/>
                     <Route path="/genre/add" element={<GenreAddPage/>}/>
+
+                    <Route path="/soul" element={<SoulPage/>}/>
+                    <Route path="/soul/:id" element={<SoulItemPage/>}/>
+                    <Route path="/soul/add" element={<SoulAddPage/>}/>
                 </Route>
             </Route>
 

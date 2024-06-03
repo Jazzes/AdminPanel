@@ -92,7 +92,7 @@ const LessonEmptyRow = memo(() => {
                 </svg>
             </div>
             <div className="LessonItemRow__row__fimbos">
-                Связные фимбо
+                Связные Фимбо
             </div>
             <div className="LessonItemRow__row__genres">
                 Связные жанры

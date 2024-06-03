@@ -41,7 +41,7 @@
 }
 
 .ImgPreview__cross::before,
-.ImgPreview__cross::after,{
+.ImgPreview__cross::after{
   content: '';
   position: absolute;
   top: 8.5px;

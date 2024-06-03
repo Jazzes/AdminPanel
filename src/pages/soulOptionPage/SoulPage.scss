@@ -1,0 +1,59 @@
+.SoulItemRow__row {
+  width: 100%;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: space-between;
+  background: white;
+  padding: 5px 10px;
+}
+
+.SoulItemRow__row__color{
+  background: rgb(238, 246, 255)
+}
+
+.SoulItemRow__row > * {
+  display: flex;
+  align-items: center;
+  margin: 0 3px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.SoulItemRow__row > *::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.SoulItemRow__row > *::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+.SoulItemRow__row__id{
+  width: 30px;
+}
+
+.SoulItemRow__row__position{
+  width: 40px;
+}
+
+.SoulItemRow__row__text, .SoulItemRow__row__addinfo, .SoulItemRow__row__block{
+  width: 120px;
+}
+
+.SoulItemRow__row__fimbos{
+  width: 112px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-height: 80px;
+  overflow-y: auto;
+  padding: 1px 0;
+}
+
+.SoulItemRow__row__edit{
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

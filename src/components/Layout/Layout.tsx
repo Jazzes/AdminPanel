@@ -48,6 +48,11 @@ const Layout = () => {
                         }>
                             Genre
                         </NavLink>
+                        <NavLink to="soul" className={({isActive}) =>
+                            ["nav__item", isActive ? "nav__activeLink" : ""].join(" ")
+                        }>
+                            Soul
+                        </NavLink>
                     </div>
 
                     <div className="nav__logout" onClick={() => {

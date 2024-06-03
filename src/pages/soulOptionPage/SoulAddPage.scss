@@ -1,0 +1,116 @@
+.SoulAddPage__container{
+  width: 100%;
+  position: relative;
+}
+
+.SoulAddPage__form{
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 1.5rem;
+  padding-bottom: 70px;
+}
+
+.SoulAddPage__form_left{
+  width: calc(50% - 15px);
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.SoulAddPage__form_right{
+  width: calc(50% - 15px);
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.SoulAddPage__form__button{
+  font-size: 1.5rem;
+  background: #19ad4b;
+  border: 1px solid #19ad4b;
+  border-radius: 5px;
+  color: #fff;
+  padding: 8px 12px;
+  text-align: center;
+  transition: all .3s linear;
+  cursor: pointer;
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.SoulAddPage__form__button:hover{
+  background: #fff;
+  color: #19ad4b;
+}
+
+.SoulAddPage__form__item{
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 2px 10px;
+  border-radius: 5px;
+  background: white;
+}
+
+.SoulAddPage__form__item_text{
+  width: 150px;
+}
+
+.SoulAddPage__form__item_input, .SoulAddPage__form__item_textarea{
+  flex: 1 1 auto;
+  margin-left: 10px;
+  border: 0;
+  background: none;
+  border-bottom: 1px solid grey;
+  padding: 8px 12px 4px 12px;
+}
+
+.SoulAddPage__form__item_input:focus, .SoulAddPage__form__item_textarea:focus{
+  border-bottom: 1px solid #2F80ED;
+}
+
+.SoulAddPage__form__item_textarea{
+  resize: none;
+  font-size: 1.5rem;
+}
+
+.SoulAddPage__form__item__column{
+  display: flex;
+  flex-direction: column;
+}
+
+.SoulAddPage__form__item__column__item{
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin: 2px 0;
+}
+
+.SoulAddPage__form__item_column__circle, .SoulAddPage__form__item_column__circle_green{
+  margin-left: 10px;
+  border: 1px solid grey;
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.SoulAddPage__form__item_column__circle_green{
+  border: 1px solid #19AD4B;
+  background: #19AD4B;
+}
+
+.SoulAddPage__form__item_column__square_green, .SoulAddPage__form__item_column__square{
+  margin-left: 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+.SoulAddPage__form__item_column__square_green{
+  border: 1px solid #19AD4B;
+  background: #19AD4B;
+}
