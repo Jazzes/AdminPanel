@@ -47,18 +47,18 @@ const SoulEmptyRow = memo(() => {
 
             <div className="SoulItemRow__row__text">
                 Текст
-                <svg width="20" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.5 0L10.2631 8.25H0.73686L5.5 0Z" fill="black"/>
-                    <path d="M5.5 20L0.73686 11.75L10.2631 11.75L5.5 20Z" fill="black"/>
-                </svg>
             </div>
 
             <div className="SoulItemRow__row__addinfo">
                 Доп. информация
             </div>
 
-            <div className="SoulItemRow__row__block">
+            <div className="SoulItemRow__row__block cursor_pointer" onClick={() => changeSort(5)}>
                 Блок
+                <svg width="20" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.5 0L10.2631 8.25H0.73686L5.5 0Z" fill="black"/>
+                    <path d="M5.5 20L0.73686 11.75L10.2631 11.75L5.5 20Z" fill="black"/>
+                </svg>
             </div>
 
             <div className="SoulItemRow__row__fimbos">

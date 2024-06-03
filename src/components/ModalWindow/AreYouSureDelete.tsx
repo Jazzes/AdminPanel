@@ -5,7 +5,7 @@ import {IAreYouSure} from "./AreYouSureBack";
 const AreYouSureDelete : FC<IAreYouSure> = ({rejectModal, confirmModal}) => {
     return (
         <div className="AreYouSure__background" onClick={rejectModal}>
-            <div className="AreYouSure__window">
+            <div className="AreYouSure__window" onClick={(e) => e.stopPropagation()}>
                 <div className="AreYouSure__question">Вы точно хотите удалить?</div>
                 <div className="AreYouSure__position">
                     <div className="AreYouSure__confirm" onClick={confirmModal}>

@@ -9,7 +9,7 @@ export interface IAreYouSure {
 const AreYouSureBack: FC<IAreYouSure> = ({confirmModal, rejectModal}) => {
     return (
         <div className="AreYouSure__background" onClick={rejectModal}>
-            <div className="AreYouSure__window">
+            <div className="AreYouSure__window" onClick={e => e.stopPropagation()}>
                 <div className="AreYouSure__question">Вы заполнили некоторые данные. Точно хотите закрыть окно?</div>
                 <div className="AreYouSure__position">
                     <div className="AreYouSure__confirm" onClick={confirmModal}>

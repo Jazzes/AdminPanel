@@ -1,10 +1,9 @@
-import React, {FC, memo} from 'react';
+import React, {FC} from 'react';
 import {ISoulAdd} from "./SoulAddInfoLeft";
 import SoulAddBlock from "./SoulAddBlock";
 
 
 const SoulAddInfoRight: FC<ISoulAdd> = ({wasChanges}) => {
-
 
     return (
         <>

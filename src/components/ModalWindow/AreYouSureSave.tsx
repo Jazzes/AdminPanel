@@ -7,7 +7,7 @@ interface IAreYouSureSave{
 const AreYouSureSave : FC<IAreYouSureSave> = ({rejectModal}) => {
     return (
         <div className="AreYouSure__background" onClick={rejectModal}>
-            <div className="AreYouSure__window">
+            <div className="AreYouSure__window" onClick={(e) => e.stopPropagation()}>
                 <div className="AreYouSure__question">Вы точно хотите внести изменения?</div>
                 <div className="AreYouSure__position">
                     <button type="submit" onClick={event => {
