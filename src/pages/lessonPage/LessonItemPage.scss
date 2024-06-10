@@ -219,6 +219,16 @@
   background: #ffa5004d;
 }
 
+.LessonItemPage__form__notes__warning{
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 2px 10px;
+  border-radius: 5px;
+  background: white;
+}
+
 .LessonItemPage__form__notes__table__hint{
   font-size: 1rem;
   left: 33px;

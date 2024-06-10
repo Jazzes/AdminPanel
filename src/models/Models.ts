@@ -118,6 +118,7 @@ export interface Fimbo extends Sample {
     note_first_color: string,
     note_second_color: string,
     position: number,
+    priority: number,
     lepest: LepestEntity[]
 }
 

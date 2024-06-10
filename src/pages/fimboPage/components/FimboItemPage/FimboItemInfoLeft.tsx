@@ -30,6 +30,16 @@ const FimboItemInfoLeft : FC<FimboItemWithChange> = memo(({fimbo, wasChanges}) =
 
             <div className="FimboItemPage__form__item">
                 <div className="FimboItemPage__form__item_text">
+                    Приоритет
+                </div>
+                <input autoComplete={"off"} required name="priority" defaultValue={fimbo.priority} pattern="[0-9]+"
+                       onChange={() => {
+                           wasChanges.current = true
+                       }} className="FimboItemPage__form__item_input"/>
+            </div>
+
+            <div className="FimboItemPage__form__item">
+                <div className="FimboItemPage__form__item_text">
                     Картинка
                 </div>
                 <input autoComplete={"off"} required name="img" defaultValue={fimbo.img}
@@ -48,9 +58,9 @@ const FimboItemInfoLeft : FC<FimboItemWithChange> = memo(({fimbo, wasChanges}) =
                        }} className="FimboItemPage__form__item_input"/>
             </div>
 
-            <FimboItemImg fimbo={fimbo} wasChanges={wasChanges} />
+            <FimboItemImg fimbo={fimbo} wasChanges={wasChanges}/>
 
-            <FimboItemVideo fimbo={fimbo} wasChanges={wasChanges} />
+            <FimboItemVideo fimbo={fimbo} wasChanges={wasChanges}/>
 
             <div className="FimboItemPage__form__item FimboItemPage__form__item_relative">
                 <div className="FimboItemPage__form__item_text">
@@ -132,7 +142,7 @@ const FimboItemInfoLeft : FC<FimboItemWithChange> = memo(({fimbo, wasChanges}) =
                        }} className="FimboItemPage__form__item_input"/>
             </div>
 
-            <FimboItemPurchase fimbo={fimbo} wasChanges={wasChanges} />
+            <FimboItemPurchase fimbo={fimbo} wasChanges={wasChanges}/>
         </>
     );
 })
