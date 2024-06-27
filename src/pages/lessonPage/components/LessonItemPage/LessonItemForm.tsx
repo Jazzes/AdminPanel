@@ -83,8 +83,7 @@ const LessonItemForm : FC<ILessonItemForm> = ({lesson}) => {
                 },
                 lesson_type_id: Number(formJson.lesson_type_id),
                 visible: formJson.visible === "1",
-                page_listen: formJson.page_listen === "1",
-                position: Number(formJson.position)
+                page_listen: formJson.page_listen === "1"
             }
 
             changeLesson(newJson).then(async (result) => {

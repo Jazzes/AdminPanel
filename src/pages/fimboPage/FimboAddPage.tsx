@@ -94,7 +94,7 @@ const FimboAddPage = () => {
             note_first_color: String(formJson.note_first_color),
             note_second_color: String(formJson.note_second_color),
             position: Number(formJson.position),
-            priority: Number(formJson.priority),
+            priority_weight: Number(formJson.priority_weight),
             lepest
         }
 

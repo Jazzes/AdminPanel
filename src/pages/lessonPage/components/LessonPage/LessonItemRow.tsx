@@ -72,9 +72,6 @@ const LessonItemRow: FC<ILessonItemRow> = memo(({lesson, index, filesHost, lesso
                 <div className="LessonItemRow__row__id">
                     {lesson.id}
                 </div>
-                <div className="LessonItemRow__row__position">
-                    {lesson.position}
-                </div>
                 <div className="LessonItemRow__row__name">
                     {lesson.name}
                 </div>

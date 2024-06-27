@@ -27,8 +27,7 @@ const GenreItemForm : FC<IGenreItem>= ({genre}) => {
 
         const newJson: Genre = {
             id: genre.id,
-            name: String(formJson.name),
-            position: Number(formJson.position)
+            name: String(formJson.name)
         }
 
         changeGenre(newJson).then(async (result) => {

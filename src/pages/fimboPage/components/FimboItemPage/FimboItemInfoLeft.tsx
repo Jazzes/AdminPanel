@@ -30,12 +30,18 @@ const FimboItemInfoLeft : FC<FimboItemWithChange> = memo(({fimbo, wasChanges}) =
 
             <div className="FimboItemPage__form__item">
                 <div className="FimboItemPage__form__item_text">
-                    Приоритет
+                    Вес приоритета
                 </div>
-                <input autoComplete={"off"} required name="priority" defaultValue={fimbo.priority} pattern="[0-9]+"
+                <input autoComplete={"off"} required name="priority_weight" defaultValue={fimbo.priority_weight}
+                       pattern="[0-9]+"
                        onChange={() => {
                            wasChanges.current = true
                        }} className="FimboItemPage__form__item_input"/>
+            </div>
+
+            <div className="hint__description__field">
+                Чем больше значение, тем более приоритнее данный Фимбо в Выборе и при переходе на кавер, при наличии
+                других вариантов.
             </div>
 
             <div className="FimboItemPage__form__item">

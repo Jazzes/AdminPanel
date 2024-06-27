@@ -26,16 +26,6 @@ const LessonAddInfoLeft : FC<ILessonAddWithVars> = memo(({wasChanges, variables}
 
             <div className="LessonAddPage__form__item">
                 <div className="LessonAddPage__form__item_text">
-                    Позиция в списке отображения
-                </div>
-                <input autoComplete={"off"} type="text" pattern="[0-9]+" required name="position" defaultValue={1}
-                       onChange={() => {
-                           wasChanges.current = true
-                       }} className="LessonAddPage__form__item_input"/>
-            </div>
-
-            <div className="LessonAddPage__form__item">
-                <div className="LessonAddPage__form__item_text">
                     Название
                 </div>
                 <input autoComplete={"off"} type="text" required name="name"

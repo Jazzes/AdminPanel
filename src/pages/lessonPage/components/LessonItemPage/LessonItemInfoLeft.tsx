@@ -13,16 +13,6 @@ const LessonItemInfoLeft : FC<ILessonItem> = memo(({wasChanges, lesson}) => {
         <>
             <div className="LessonItemPage__form__item">
                 <div className="LessonItemPage__form__item_text">
-                    Позиция в списке отображения
-                </div>
-                <input autoComplete={"off"} type="text" pattern="[0-9]+" required name="position" defaultValue={lesson.lesson.position}
-                       onChange={() => {
-                           wasChanges.current = true
-                       }} className="LessonItemPage__form__item_input"/>
-            </div>
-
-            <div className="LessonItemPage__form__item">
-                <div className="LessonItemPage__form__item_text">
                     Название
                 </div>
                 <input autoComplete={"off"} type="text" required name="name" defaultValue={lesson.lesson.name}

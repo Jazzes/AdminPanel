@@ -47,8 +47,7 @@ export interface Lesson extends Sample {
     mp3: Mp3Entity,
     lesson_type_id: number,
     visible: boolean,
-    page_listen: boolean,
-    position: number
+    page_listen: boolean
 }
 
 export interface LessonResponse extends Lesson{
@@ -118,14 +117,13 @@ export interface Fimbo extends Sample {
     note_first_color: string,
     note_second_color: string,
     position: number,
-    priority: number,
+    priority_weight: number,
     lepest: LepestEntity[]
 }
 
 export interface Genre{
     id: number,
-    name: string,
-    position: number
+    name: string
 }
 
 export interface LessonType extends Sample {

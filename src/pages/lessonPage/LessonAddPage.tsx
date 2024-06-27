@@ -109,8 +109,7 @@ const LessonAddPage = () => {
             },
             lesson_type_id: Number(formJson.lesson_type_id),
             visible: formJson.visible === "1",
-            page_listen: formJson.page_listen === "1",
-            position: Number(formJson.position)
+            page_listen: formJson.page_listen === "1"
         }
 
         createLesson(newJson).then(async (result) => {

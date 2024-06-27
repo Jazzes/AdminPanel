@@ -51,15 +51,6 @@ const LessonEmptyRow = memo(() => {
                 </svg>
             </div>
 
-            <div className="LessonItemRow__row__position cursor_pointer" onClick={() => {
-                changeSort(5)
-            }}>
-                pos
-                <svg width="20" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.5 0L10.2631 8.25H0.73686L5.5 0Z" fill="black"/>
-                    <path d="M5.5 20L0.73686 11.75L10.2631 11.75L5.5 20Z" fill="black"/>
-                </svg>
-            </div>
             <div className="LessonItemRow__row__name cursor_pointer" onClick={() => {
                 changeSort(7)
             }}>

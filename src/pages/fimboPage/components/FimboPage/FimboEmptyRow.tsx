@@ -39,8 +39,8 @@ const FimboEmptyRow = memo(() => {
                 pos
             </div>
 
-            <div className="FimboItemRow__row__priority cursor_pointer" onClick={() => changeSort(3)}>
-                Приоритет
+            <div className="FimboItemRow__row__priority_weight cursor_pointer" onClick={() => changeSort(3)}>
+                Вес приоритета
                 <svg width="20" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.5 0L10.2631 8.25H0.73686L5.5 0Z" fill="black"/>
                     <path d="M5.5 20L0.73686 11.75L10.2631 11.75L5.5 20Z" fill="black"/>

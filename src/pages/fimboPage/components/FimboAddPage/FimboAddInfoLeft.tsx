@@ -29,12 +29,17 @@ const FimboAddInfoLeft : FC<IFimboAdd> = memo(({wasChanges}) => {
 
             <div className="FimboAddPage__form__item">
                 <div className="FimboAddPage__form__item_text">
-                    Приоритет
+                    Вес приоритета
                 </div>
-                <input autoComplete={"off"} required name="priority" pattern="[0-9]+" defaultValue={1}
+                <input autoComplete={"off"} required name="priority_weight" pattern="[0-9]+" defaultValue={1}
                        onChange={() => {
                            wasChanges.current = true
                        }} className="FimboAddPage__form__item_input"/>
+            </div>
+
+            <div className="hint__description__field">
+                Чем больше значение, тем более приоритнее данный Фимбо в Выборе и при переходе на кавер, при наличии
+                других вариантов.
             </div>
 
             <div className="FimboAddPage__form__item">
