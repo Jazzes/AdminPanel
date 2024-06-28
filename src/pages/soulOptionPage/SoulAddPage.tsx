@@ -34,7 +34,7 @@ const SoulAddPage = () => {
             additional_info: String(formJson.additional_info),
             block: String(formJson.block),
             text: String(formJson.text),
-            position: Number(formJson.position)
+            position_weight: Number(formJson.position_weight)
         }
 
         createSoul(newJson).then(async (result) => {

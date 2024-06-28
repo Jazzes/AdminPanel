@@ -20,9 +20,9 @@ const FimboItemInfoLeft : FC<FimboItemWithChange> = memo(({fimbo, wasChanges}) =
 
             <div className="FimboItemPage__form__item">
                 <div className="FimboItemPage__form__item_text">
-                    pos
+                    Вес позиции
                 </div>
-                <input autoComplete={"off"} required name="position" defaultValue={fimbo.position} pattern="[0-9]+"
+                <input autoComplete={"off"} required name="position_weight" defaultValue={fimbo.position_weight} pattern="[0-9]+"
                        onChange={() => {
                            wasChanges.current = true
                        }} className="FimboItemPage__form__item_input"/>

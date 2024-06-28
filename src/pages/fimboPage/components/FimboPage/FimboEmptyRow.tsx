@@ -35,7 +35,7 @@ const FimboEmptyRow = memo(() => {
                 </svg>
             </div>
 
-            <div className="FimboItemRow__row__pos">
+            <div className="FimboItemRow__row__position_weight">
                 pos
             </div>
 

@@ -18,9 +18,9 @@ const AudioItemInfoLeft : FC<AudioItemWithChange>= ({audio, wasChanges}) => {
 
             <div className="AudioItemPage__form__item">
                 <div className="AudioItemPage__form__item_text">
-                    pos
+                    Вес позиции
                 </div>
-                <input autoComplete={"off"} required name="position" pattern="[0-9]+" defaultValue={audio.position}
+                <input autoComplete={"off"} required name="position_weight" pattern="[0-9]+" defaultValue={audio.position_weight}
                        onChange={() => {
                            wasChanges.current = true
                        }} className="AudioItemPage__form__item_input"/>

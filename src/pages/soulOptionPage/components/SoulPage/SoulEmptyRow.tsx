@@ -35,7 +35,7 @@ const SoulEmptyRow = memo(() => {
                 </svg>
             </div>
 
-            <div className="SoulItemRow__row__position cursor_pointer" onClick={() => {
+            <div className="SoulItemRow__row__position_weight cursor_pointer" onClick={() => {
                 changeSort(3)
             }}>
                 pos

@@ -12,9 +12,9 @@ const SoulAddInfoLeft : FC<ISoulAdd> = ({wasChanges}) => {
         <>
             <div className="SoulAddPage__form__item">
                 <div className="SoulAddPage__form__item_text">
-                    Позиция в списке отображения
+                    Вес позиции
                 </div>
-                <input autoComplete={"off"} type="text" pattern="[0-9]+" required name="position" defaultValue={1}
+                <input autoComplete={"off"} type="text" pattern="[0-9]+" required name="position_weight" defaultValue={50}
                        onChange={() => {
                            wasChanges.current = true
                        }} className="SoulAddPage__form__item_input"/>

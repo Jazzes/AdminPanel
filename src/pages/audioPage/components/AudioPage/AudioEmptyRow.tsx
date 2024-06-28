@@ -52,7 +52,7 @@ const AudioEmptyRow = () => {
                 </svg>
             </div>
 
-            <div className="AudioItemRow__row__position cursor_pointer" onClick={() => {
+            <div className="AudioItemRow__row__position_weight cursor_pointer" onClick={() => {
                 changeSort(5)
             }}>
                 pos

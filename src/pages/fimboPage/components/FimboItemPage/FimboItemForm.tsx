@@ -92,7 +92,7 @@ const FimboItemForm: FC<FimboItem> = memo(({fimbo}) => {
             note_default_color: String(formJson.note_default_color),
             note_first_color: String(formJson.note_first_color),
             note_second_color: String(formJson.note_second_color),
-            position: Number(formJson.position),
+            position_weight: Number(formJson.position_weight),
             priority_weight: Number(formJson.priority_weight),
             lepest
         }

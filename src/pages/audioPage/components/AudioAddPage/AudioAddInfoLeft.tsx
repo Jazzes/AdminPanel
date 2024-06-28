@@ -17,9 +17,9 @@ const AudioAddInfoLeft : FC<IAudioAdd> = ({wasChanges}) => {
 
             <div className="AudioAddPage__form__item">
                 <div className="AudioAddPage__form__item_text">
-                    pos
+                    Вес позиции
                 </div>
-                <input autoComplete={"off"} required name="position" pattern="[0-9]+"
+                <input autoComplete={"off"} required name="position_weight" pattern="[0-9]+" defaultValue={50}
                        onChange={() => {
                            wasChanges.current = true
                        }} className="AudioAddPage__form__item_input"/>

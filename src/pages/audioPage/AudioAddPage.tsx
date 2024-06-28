@@ -35,7 +35,7 @@ const AudioAddPage = () => {
             name: String(formJson.name),
             img: String(formJson.img),
             path: String(formJson.path),
-            position: Number(formJson.position),
+            position_weight: Number(formJson.position_weight),
             type: String(formJson.type),
             fimbo_size: String(formJson.fimbo_size),
             visible: formJson.visible === "1",

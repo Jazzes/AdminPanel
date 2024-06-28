@@ -16,8 +16,8 @@ const SoulItemRow: FC<ISoulItemRow> = memo(({soul, index}) => {
                 <div className="SoulItemRow__row__id">
                     {soul.id}
                 </div>
-                <div className="SoulItemRow__row__position">
-                    {soul.position}
+                <div className="SoulItemRow__row__position_weight">
+                    {soul.position_weight}
                 </div>
                 <div className="SoulItemRow__row__text">
                     {soul.text}

@@ -19,9 +19,9 @@ const FimboAddInfoLeft : FC<IFimboAdd> = memo(({wasChanges}) => {
 
             <div className="FimboAddPage__form__item">
                 <div className="FimboAddPage__form__item_text">
-                    pos
+                    Вес позиции
                 </div>
-                <input autoComplete={"off"} required name="position" pattern="[0-9]+" defaultValue={1}
+                <input autoComplete={"off"} required name="position_weight" pattern="[0-9]+" defaultValue={50}
                        onChange={() => {
                            wasChanges.current = true
                        }} className="FimboAddPage__form__item_input"/>
@@ -31,7 +31,7 @@ const FimboAddInfoLeft : FC<IFimboAdd> = memo(({wasChanges}) => {
                 <div className="FimboAddPage__form__item_text">
                     Вес приоритета
                 </div>
-                <input autoComplete={"off"} required name="priority_weight" pattern="[0-9]+" defaultValue={1}
+                <input autoComplete={"off"} required name="priority_weight" pattern="[0-9]+" defaultValue={50}
                        onChange={() => {
                            wasChanges.current = true
                        }} className="FimboAddPage__form__item_input"/>

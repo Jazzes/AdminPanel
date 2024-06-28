@@ -20,8 +20,8 @@ const FimboItemRow: FC<IFimboItemRow> = memo(({fimbo, index, filesHost}) => {
                     {fimbo.id}
                 </div>
 
-                <div className="FimboItemRow__row__pos">
-                    {fimbo.position}
+                <div className="FimboItemRow__row__position_weight">
+                    {fimbo.position_weight}
                 </div>
 
                 <div className="FimboItemRow__row__priority_weight">

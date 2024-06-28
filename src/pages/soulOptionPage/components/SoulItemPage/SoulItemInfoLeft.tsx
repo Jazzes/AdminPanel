@@ -7,9 +7,9 @@ const SoulItemInfoLeft : FC<ISoulItem> = memo(({wasChanges, soul}) => {
         <>
             <div className="SoulItemPage__form__item">
                 <div className="SoulItemPage__form__item_text">
-                    Позиция в списке отображения
+                    Вес позиции
                 </div>
-                <input autoComplete={"off"} type="text" pattern="[0-9]+" required name="position" defaultValue={soul.soul.position}
+                <input autoComplete={"off"} type="text" pattern="[0-9]+" required name="position_weight" defaultValue={soul.soul.position_weight}
                        onChange={() => {
                            wasChanges.current = true
                        }} className="SoulItemPage__form__item_input"/>

@@ -22,7 +22,17 @@ const LessonAddInfoLeft : FC<ILessonAddWithVars> = memo(({wasChanges, variables}
     return (
 
         <>
-            <LessonAddType wasChanges={wasChanges} />
+            <LessonAddType wasChanges={wasChanges}/>
+
+            <div className="LessonAddPage__form__item">
+                <div className="LessonAddPage__form__item_text">
+                    Вес позиции
+                </div>
+                <input autoComplete={"off"} type="text" required name="position_weight" pattern="[0-9]+" defaultValue={50}
+                       onChange={() => {
+                           wasChanges.current = true
+                       }} className="LessonAddPage__form__item_input"/>
+            </div>
 
             <div className="LessonAddPage__form__item">
                 <div className="LessonAddPage__form__item_text">
@@ -64,7 +74,7 @@ const LessonAddInfoLeft : FC<ILessonAddWithVars> = memo(({wasChanges, variables}
                        }} className="LessonAddPage__form__item_input"/>
             </div>
 
-            <LessonAddMp3 variables={variables} wasChanges={wasChanges} />
+            <LessonAddMp3 variables={variables} wasChanges={wasChanges}/>
 
             <div className="LessonAddPage__form__item">
                 <div className="LessonAddPage__form__item_text">mp3_yandex</div>
@@ -73,7 +83,7 @@ const LessonAddInfoLeft : FC<ILessonAddWithVars> = memo(({wasChanges, variables}
                 }} wrap="soft" className="LessonAddPage__form__item_textarea"/>
             </div>
 
-            <LessonAddMp4 wasChanges={wasChanges} />
+            <LessonAddMp4 wasChanges={wasChanges}/>
 
             <div className="LessonAddPage__form__item">
                 <div className="LessonAddPage__form__item_text">Путь</div>
@@ -83,13 +93,13 @@ const LessonAddInfoLeft : FC<ILessonAddWithVars> = memo(({wasChanges, variables}
                        className="LessonAddPage__form__item_input"></input>
             </div>
 
-            <LessonAddVisible wasChanges={wasChanges} />
+            <LessonAddVisible wasChanges={wasChanges}/>
 
-            <LessonAddPageListen wasChanges={wasChanges} />
+            <LessonAddPageListen wasChanges={wasChanges}/>
 
-            <LessonAddFimbo wasChanges={wasChanges} />
+            <LessonAddFimbo wasChanges={wasChanges}/>
 
-            <LessonAddGenre wasChanges={wasChanges} />
+            <LessonAddGenre wasChanges={wasChanges}/>
 
         </>
     );

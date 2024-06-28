@@ -70,8 +70,8 @@ const AudioItemRow : FC<IAudioItemRow> = ({audio, index, filesHost, fimbos}) => 
                 <div className="AudioItemRow__row__id">
                     {audio.id}
                 </div>
-                <div className="AudioItemRow__row__position">
-                    {audio.position}
+                <div className="AudioItemRow__row__position_weight">
+                    {audio.position_weight}
                 </div>
                 <div className="AudioItemRow__row__name">
                     {audio.name}
