@@ -86,7 +86,7 @@ const SoulPageParams = memo(() => {
                 </div>
 
                 {(fimbos) &&
-                    <div style={fimboSort ? {opacity: "1"} : {opacity: "0"}}
+                    <div style={fimboSort ? {opacity: "1"} : {opacity: "0", pointerEvents: "none"}}
                         className="SoulPageParams__fimbos__list">
                         <div className="SoulPageParams__fimbos__clearAll" onClick={() => {
                             connectedFimbosRef.current = []

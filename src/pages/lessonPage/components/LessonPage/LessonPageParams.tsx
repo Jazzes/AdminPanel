@@ -130,7 +130,7 @@ const LessonPageParams = memo(() => {
                 </div>
 
                 {(fimbos) &&
-                    <div style={fimboSort ? {opacity: "1"} : {opacity: "0"}}
+                    <div style={fimboSort ? {opacity: "1"} : {opacity: "0", pointerEvents: "none"}}
                         className="LessonPageParams__fimbos__list">
                         <div className="LessonPageParams__fimbos__clearAll" onClick={() => {
                             connectedFimbosRef.current = []
@@ -175,7 +175,7 @@ const LessonPageParams = memo(() => {
                 </div>
 
                 {(lessonTypes) &&
-                    <div style={lessonSort ? {opacity: "1"} : {opacity: "0"}}
+                    <div style={lessonSort ? {opacity: "1"} : {opacity: "0", pointerEvents: "none"}}
                          className="LessonPageParams__lessons__list">
                         <div className="LessonPageParams__lessons__clearAll"
                              onClick={() => {
@@ -221,7 +221,7 @@ const LessonPageParams = memo(() => {
                 </div>
 
                 {(genres) &&
-                    <div style={genreSort ? {opacity: "1"} : {opacity: "0"}}
+                    <div style={genreSort ? {opacity: "1"} : {opacity: "0", pointerEvents: "none"}}
                          className="LessonPageParams__genres__list">
                         <div className="LessonPageParams__genres__clearAll"
                              onClick={() => {

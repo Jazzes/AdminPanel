@@ -84,7 +84,7 @@ const AudioPageParams = () => {
                 </div>
 
                 {(fimbos) &&
-                    <div style={fimboSort ? {opacity: "1"} : {opacity: "0"}}
+                    <div style={fimboSort ? {opacity: "1"} : {opacity: "0", pointerEvents: "none"}}
                          className="AudioPageParams__fimbos__list">
                         <div className="AudioPageParams__fimbos__clearAll" onClick={() => {
                             connectedFimbosRef.current = []
