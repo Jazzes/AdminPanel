@@ -22,7 +22,7 @@ const SoulItemBlock : FC<ISoulItem> = ({soul, wasChanges}) => {
                 <div className="SoulItemPage__form__item__column">
                     {
                         types.current.map(ent =>
-                            <div className="SoulItemPage__form__item__column__item" onClick={() => {
+                            <div style={{pointerEvents: "none", color: "gray"}} className="SoulItemPage__form__item__column__item" onClick={() => {
                                 wasChanges.current = true
                                 setCurrentId(ent.id)
                             }} key={ent.id}>

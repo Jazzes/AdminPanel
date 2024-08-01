@@ -9,7 +9,7 @@ const SoulAddBlock: FC<ISoulAdd> = ({wasChanges}) => {
         {name: 'color', id: 2}
     ])
 
-    const [currentId, setCurrentId] = useState(0)
+    const [currentId, setCurrentId] = useState(2)
 
     return (
         <div className="SoulAddPage__form__item">
@@ -21,7 +21,7 @@ const SoulAddBlock: FC<ISoulAdd> = ({wasChanges}) => {
             <div className="SoulAddPage__form__item__column">
                 {
                     types.current.map(ent =>
-                        <div className="SoulAddPage__form__item__column__item" onClick={() => {
+                        <div style={ent.id !== 2 ? {pointerEvents: "none", color: "gray"} : {}} className="SoulAddPage__form__item__column__item" onClick={() => {
                             wasChanges.current = true
                             setCurrentId(ent.id)
                         }} key={ent.id}>

@@ -14,13 +14,17 @@ const LessonItemInfoLeft : FC<ILessonItem> = memo(({wasChanges, lesson}) => {
 
             <div className="LessonItemPage__form__item">
                 <div className="LessonItemPage__form__item_text">
-                    Вес позиции
+                    Позиция сортировки
                 </div>
-                <input autoComplete={"off"} type="text" required name="position_weight" defaultValue={lesson.lesson.position_weight}
+                <input autoComplete={"off"} type="text" required name="position_weight"
+                       defaultValue={lesson.lesson.position_weight}
                        pattern="[0-9]+"
                        onChange={() => {
                            wasChanges.current = true
                        }} className="LessonItemPage__form__item_input"/>
+            </div>
+            <div className="hint__description__field">
+                Чем больше значение, тем первее элемент будет идти по списку.
             </div>
 
             <div className="LessonItemPage__form__item">

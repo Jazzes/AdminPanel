@@ -18,12 +18,16 @@ const AudioItemInfoLeft : FC<AudioItemWithChange>= ({audio, wasChanges}) => {
 
             <div className="AudioItemPage__form__item">
                 <div className="AudioItemPage__form__item_text">
-                    Вес позиции
+                    Позиция сортировки
                 </div>
-                <input autoComplete={"off"} required name="position_weight" pattern="[0-9]+" defaultValue={audio.position_weight}
+                <input autoComplete={"off"} required name="position_weight" pattern="[0-9]+"
+                       defaultValue={audio.position_weight}
                        onChange={() => {
                            wasChanges.current = true
                        }} className="AudioItemPage__form__item_input"/>
+            </div>
+            <div className="hint__description__field">
+                Чем больше значение, тем первее элемент будет идти по списку.
             </div>
 
             <div className="AudioItemPage__form__item">
@@ -55,7 +59,7 @@ const AudioItemInfoLeft : FC<AudioItemWithChange>= ({audio, wasChanges}) => {
                        }} className="AudioItemPage__form__item_input"/>
             </div>
 
-            <AudioItemListenMp3 audio={audio} />
+            <AudioItemListenMp3 audio={audio}/>
 
             <AudioItemFimbo audio={audio} wasChanges={wasChanges}/>
 

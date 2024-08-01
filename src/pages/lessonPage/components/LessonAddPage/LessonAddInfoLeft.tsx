@@ -26,12 +26,16 @@ const LessonAddInfoLeft : FC<ILessonAddWithVars> = memo(({wasChanges, variables}
 
             <div className="LessonAddPage__form__item">
                 <div className="LessonAddPage__form__item_text">
-                    Вес позиции
+                    Позиция сортировки
                 </div>
-                <input autoComplete={"off"} type="text" required name="position_weight" pattern="[0-9]+" defaultValue={50}
+                <input autoComplete={"off"} type="text" required name="position_weight" pattern="[0-9]+"
+                       defaultValue={50}
                        onChange={() => {
                            wasChanges.current = true
                        }} className="LessonAddPage__form__item_input"/>
+            </div>
+            <div className="hint__description__field">
+                Чем больше значение, тем первее элемент будет идти по списку.
             </div>
 
             <div className="LessonAddPage__form__item">
