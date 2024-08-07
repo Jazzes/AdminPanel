@@ -12,7 +12,7 @@ const SoulAddInfoLeft : FC<ISoulAdd> = ({wasChanges}) => {
         <>
             <div className="SoulAddPage__form__item">
                 <div className="SoulAddPage__form__item_text">
-                    Позиция сортировки(от большего к меньшему)
+                    Позиция сортировки
                 </div>
                 <input autoComplete={"off"} type="text" pattern="[0-9]+" required name="position_weight"
                        defaultValue={50}

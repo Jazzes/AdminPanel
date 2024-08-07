@@ -3,6 +3,8 @@ import {IFimboAdd} from "../../FimboAddPage";
 import FimboAddImg from "./FimboAddImg";
 import FimboAddPurchase from "./FimboAddPurchase";
 import FimboAddVideo from "./FimboAddVideo";
+import FimboAddAutotextDesign from "./FimboAddAutotextDesign";
+import FimboAddAutotextSound from "./FimboAddAutotextSound";
 
 const FimboAddInfoLeft : FC<IFimboAdd> = memo(({wasChanges}) => {
     return (
@@ -139,6 +141,8 @@ const FimboAddInfoLeft : FC<IFimboAdd> = memo(({wasChanges}) => {
                        }} className="FimboAddPage__form__item_input"/>
             </div>
             <FimboAddPurchase wasChanges={wasChanges}/>
+            <FimboAddAutotextDesign wasChanges={wasChanges} />
+            <FimboAddAutotextSound wasChanges={wasChanges} />
         </>
     );
 })

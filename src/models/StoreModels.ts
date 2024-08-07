@@ -46,15 +46,19 @@ export interface ISoulResponse{
     rows: SoulResponse[]
 }
 
-export interface ISoulOneResponse{
-    soul: Soul,
-    fimbos: {
+interface FimboWithLinks extends Fimbo{
+    soul_fimbo_link: {
+        fimbo_id: number,
         id: number,
-        name: string
-    }[]
+        soul_option_id: number,
+        text_reason: string[]
+    }
 }
 
-
+export interface ISoulOneResponse{
+    soul: Soul,
+    fimbos: FimboWithLinks[];
+}
 
 export interface ILessonTypeResponse{
     count: number,

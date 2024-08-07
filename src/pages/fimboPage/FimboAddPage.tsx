@@ -77,6 +77,20 @@ const FimboAddPage = () => {
             })
         }
 
+        const text_reason_design: string[] = []
+        let z1 = 0
+        while (formJson[`text_reason_design_${z1}`] === "" || formJson[`text_reason_design_${z1}`]) {
+            text_reason_design.push(String(formJson[`text_reason_design_${z1}`]))
+            ++z1
+        }
+
+        const text_reason_sound: string[] = []
+        let z2 = 0
+        while (formJson[`text_reason_sound_${z2}`] === "" || formJson[`text_reason_sound_${z2}`]) {
+            text_reason_sound.push(String(formJson[`text_reason_sound_${z2}`]),)
+            ++z2
+        }
+
         const newJson: Fimbo = {
             id: 0,
             name: String(formJson.name),
@@ -95,7 +109,9 @@ const FimboAddPage = () => {
             note_second_color: String(formJson.note_second_color),
             position_weight: Number(formJson.position_weight),
             priority_weight: Number(formJson.priority_weight),
-            lepest
+            lepest,
+            text_reason_design,
+            text_reason_sound,
         }
 
         createFimbo(newJson).then(async (result) => {

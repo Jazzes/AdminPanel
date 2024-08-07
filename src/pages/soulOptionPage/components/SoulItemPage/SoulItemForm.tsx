@@ -9,15 +9,17 @@ import {errorSlice, successSlice} from "../../../../store/reducer/MessagesSlice"
 import {useAppDispatch} from "../../../../store/hooks/redux";
 import FetchLoading from "../../../../components/Loading/FetchLoading";
 import {SoulApi} from "../../../../store/services/SoulOptionApiService";
-export interface ISoulItemForm{
+
+export interface ISoulItemForm {
     soul: ISoulOneResponse
 }
-export interface ISoulItem{
+
+export interface ISoulItem {
     wasChanges: React.MutableRefObject<boolean>
     soul: ISoulOneResponse
 }
 
-const SoulItemForm : FC<ISoulItemForm> = ({soul}) => {
+const SoulItemForm: FC<ISoulItemForm> = ({soul}) => {
 
     const wasChanges = useRef(false)
     const [changeSoul, {isLoading: changeLoading}] = SoulApi.useChangeSoulMutation()
@@ -27,7 +29,7 @@ const SoulItemForm : FC<ISoulItemForm> = ({soul}) => {
     const {errorShow} = errorSlice.actions
     const dispatch = useAppDispatch()
 
-    const handleSubmit = async (e : FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         if (wasChanges.current) {
 
@@ -47,8 +49,21 @@ const SoulItemForm : FC<ISoulItemForm> = ({soul}) => {
                 const success = result as { data: Soul }
                 if (success.data) {
                     const connected_fimbos = String(formJson.connected_fimbos).split(',').map(ent => Number(ent)).filter(ent => ent !== 0)
+
+                    const fimbos: { fimbo_id: number, text_reason: string[] }[] = []
+                    connected_fimbos.forEach((ent) => {
+                            const textes: string[] = []
+                            let z = 0
+                            while (formJson[`text_reason_${ent}_${z}`] === "" || formJson[`text_reason_${ent}_${z}`]) {
+                                textes.push(String(formJson[`text_reason_${ent}_${z}`]))
+                                ++z
+                            }
+                            fimbos.push({fimbo_id: ent, text_reason: textes})
+                        }
+                    )
+
                     await changeLinks({
-                        fimbos: connected_fimbos,
+                        fimbos: fimbos,
                         soul_option_id: success.data.id
                     })
 

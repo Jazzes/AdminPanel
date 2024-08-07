@@ -67,7 +67,7 @@ export const SoulApi = createApi({
             invalidatesTags: ['Soul']
         }),
 
-        addSoulFimboLinks: build.mutation<SoulFimboLink[], { fimbos: number[], soul_option_id: number }>({
+        addSoulFimboLinks: build.mutation<SoulFimboLink[], { fimbos: {fimbo_id: number, text_reason: string[]}[], soul_option_id: number }>({
             query: (post) => ({
                 url: soulFimboLinkAddUrlPref,
                 method: "POST",
@@ -79,7 +79,7 @@ export const SoulApi = createApi({
             invalidatesTags: ['Soul']
         }),
 
-        changeSoulFimboLinks: build.mutation<SoulFimboLink[], { fimbos: number[], soul_option_id: number }>({
+        changeSoulFimboLinks: build.mutation<SoulFimboLink[], { fimbos: {fimbo_id: number, text_reason: string[]}[], soul_option_id: number }>({
             query: (post) => ({
                 url: soulFimboLinkChangeUrlPref,
                 method: "PUT",

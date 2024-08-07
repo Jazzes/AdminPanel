@@ -3,6 +3,8 @@ import {FimboItemWithChange} from "../../FimboItemPage";
 import FimboItemImg from "./FimboItemImg";
 import FimboItemPurchase from "./FimboItemPurchase";
 import FimboItemVideo from "./FimboItemVideo";
+import FimboItemAutotextDesign from "./FimboItemAutotextDesign";
+import FimboItemAutotextSound from "./FimboItemAutotextSound";
 
 const FimboItemInfoLeft : FC<FimboItemWithChange> = memo(({fimbo, wasChanges}) => {
 
@@ -153,6 +155,8 @@ const FimboItemInfoLeft : FC<FimboItemWithChange> = memo(({fimbo, wasChanges}) =
             </div>
 
             <FimboItemPurchase fimbo={fimbo} wasChanges={wasChanges}/>
+            <FimboItemAutotextDesign fimbo={fimbo} wasChanges={wasChanges} />
+            <FimboItemAutotextSound fimbo={fimbo} wasChanges={wasChanges} />
         </>
     );
 })

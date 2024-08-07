@@ -114,3 +114,40 @@
   border: 1px solid #19AD4B;
   background: #19AD4B;
 }
+
+.SoulAddPage__form__item__plusMinus{
+  display: flex;
+}
+
+.SoulAddPage__form__item__plusMinus__plus, .SoulAddPage__form__item__plusMinus__minus{
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 2rem;
+  transition: .3s linear all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.SoulAddPage__form__item__plusMinus__minus{
+  background: #eb4242;
+  border: 1px solid #eb4242;
+  margin-left: 5px;
+}
+
+.SoulAddPage__form__item__plusMinus__minus:hover{
+  background: white;
+  color: #eb4242;
+}
+
+.SoulAddPage__form__item__plusMinus__plus{
+  background: #19AD4B;
+  border: 1px solid #19AD4B;
+}
+
+.SoulAddPage__form__item__plusMinus__plus:hover{
+  background: white;
+  color: #19AD4B;
+}

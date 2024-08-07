@@ -119,7 +119,9 @@ export interface Fimbo extends Sample {
     note_second_color: string,
     position_weight: number,
     priority_weight: number,
-    lepest: LepestEntity[]
+    lepest: LepestEntity[],
+    text_reason_design: string[]
+    text_reason_sound: string[]
 }
 
 export interface Genre{

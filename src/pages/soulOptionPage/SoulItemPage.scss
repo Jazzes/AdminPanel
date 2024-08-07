@@ -80,6 +80,11 @@
   border-bottom: 1px solid #2F80ED;
 }
 
+.SoulItemPage__form__item_textarea{
+  font-size: 1.5rem;
+  resize: none;
+}
+
 .SoulItemPage__form__item__column{
   display: flex;
   flex-direction: column;
@@ -116,4 +121,41 @@
 .SoulItemPage__form__item_column__square_green{
   border: 1px solid #19AD4B;
   background: #19AD4B;
+}
+
+.SoulItemPage__form__item__plusMinus{
+  display: flex;
+}
+
+.SoulItemPage__form__item__plusMinus__plus, .SoulItemPage__form__item__plusMinus__minus{
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 2rem;
+  transition: .3s linear all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.SoulItemPage__form__item__plusMinus__minus{
+  background: #eb4242;
+  border: 1px solid #eb4242;
+  margin-left: 5px;
+}
+
+.SoulItemPage__form__item__plusMinus__minus:hover{
+  background: white;
+  color: #eb4242;
+}
+
+.SoulItemPage__form__item__plusMinus__plus{
+  background: #19AD4B;
+  border: 1px solid #19AD4B;
+}
+
+.SoulItemPage__form__item__plusMinus__plus:hover{
+  background: white;
+  color: #19AD4B;
 }

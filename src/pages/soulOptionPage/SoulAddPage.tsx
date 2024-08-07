@@ -41,8 +41,20 @@ const SoulAddPage = () => {
             const success = result as { data: Soul }
             if (success.data) {
                 const connected_fimbos = String(formJson.connected_fimbos).split(',').map(ent => Number(ent)).filter(ent => ent !== 0)
+
+                const fimbos : {fimbo_id: number, text_reason: string[] }[] = []
+                connected_fimbos.forEach((ent) => {
+                        const textes: string[] = []
+                        let z = 0
+                        while (formJson[`text_reason_${ent}_${z}`] === "" || formJson[`text_reason_${ent}_${z}`]) {
+                            textes.push(String(formJson[`text_reason_${ent}_${z}`]))
+                            ++z
+                        }
+                        fimbos.push({fimbo_id: ent, text_reason: textes})
+                    }
+                )
                 await createLinks({
-                    fimbos: connected_fimbos,
+                    fimbos: fimbos,
                     soul_option_id: success.data.id
                 })
                 dispatch(successShow(true))
